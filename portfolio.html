@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Landscaping & Lawn Care Projects | Clarksville TN</title>
+  <meta name="description" content="Explore our project gallery of custom patios, stone retaining walls, clean mulch bed installations, and perfectly manicured lawns in Clarksville, TN.">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="assets/logos/jds-logo-VeJQuvJQ.png">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo-link">
+        <img src="assets/logos/jds-logo-VeJQuvJQ.png" alt="JD's Lawn & Landscaping Logo">
+        <div class="logo-text">
+          JD'S LAWN & LANDSCAPING
+          <span>EST. 2021</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-btn"><a href="contact.html" class="btn btn-primary" id="nav-cta-btn">Get Estimate</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle Menu" id="mobile-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Inner Hero -->
+  <section class="inner-hero">
+    <div class="container">
+      <h1>Project Portfolio</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>&bull;</span>
+        <span>Portfolio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Portfolio Gallery -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header center text-center" style="margin-bottom: 30px;">
+        <span class="section-tag">Recently Completed Work</span>
+        <h2 class="section-title">Results that speak for themselves</h2>
+        <p class="section-subtitle">We approach every property with neat edges, precise levels, and careful craftsmanship. Click below to filter by category.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="lawn">Lawn Mowing & Care</button>
+        <button class="filter-btn" data-filter="landscaping">Mulching & Design</button>
+        <button class="filter-btn" data-filter="hardscaping">Patios & Walls</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="portfolio-grid">
+        <!-- Item 1: Lawn (col-8) -->
+        <div class="portfolio-item col-8" data-category="lawn">
+          <img src="assets/images/portfolio-lawn.jpg" alt="Lawn Care & Maintenance project in Clarksville TN">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Lawn Mowing & Care</span>
+            <h3 class="portfolio-title">Manicured Turf & Edging</h3>
+          </div>
+        </div>
+
+        <!-- Item 2: Mulch (col-4) -->
+        <div class="portfolio-item col-4" data-category="landscaping">
+          <img src="assets/images/services-mulch.jpg" alt="Clean Edges & Mulch Bed Redesign project in Clarksville TN">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Mulching & Design</span>
+            <h3 class="portfolio-title">Clean Mulch Bed & Edging</h3>
+          </div>
+        </div>
+
+        <!-- Item 3: Patio (col-4) -->
+        <div class="portfolio-item col-4" data-category="hardscaping">
+          <img src="assets/images/services-patios.jpg" alt="Custom Paver Patio in Clarksville TN">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Patios & Walls</span>
+            <h3 class="portfolio-title">Paver Patio & Fire Pit</h3>
+          </div>
+        </div>
+
+        <!-- Item 4: Design (col-8) -->
+        <div class="portfolio-item col-8" data-category="landscaping">
+          <img src="assets/images/services-design.jpg" alt="Landscape design in Clarksville TN">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Mulching & Design</span>
+            <h3 class="portfolio-title">Lush Landscape Beds & Planting</h3>
+          </div>
+        </div>
+
+        <!-- Item 5: Wall (col-8) -->
+        <div class="portfolio-item col-8" data-category="hardscaping">
+          <img src="assets/images/services-walls.jpg" alt="Stone retaining wall project in Clarksville TN">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Patios & Walls</span>
+            <h3 class="portfolio-title">Stone Retaining Wall</h3>
+          </div>
+        </div>
+
+        <!-- Item 6: Hedge (col-4) -->
+        <div class="portfolio-item col-4" data-category="lawn">
+          <img src="assets/images/standards-hedge.jpg" alt="Manicured boxwood hedges along brick walkway">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Lawn Mowing & Care</span>
+            <h3 class="portfolio-title">Boxwood Hedge Trimming</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-padding bg-dark text-center" style="background-image: linear-gradient(135deg, rgba(4, 28, 16, 0.9) 0%, rgba(4, 28, 16, 0.95) 100%), url('assets/images/hero-bg.jpg'); background-size: cover; background-position: center;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-title text-white" style="font-size: 2.8rem; margin-bottom: 20px;">Ready to start your property transformation?</h2>
+      <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.15rem; margin-bottom: 35px; font-weight: 300;">
+        Contact JD's Lawn & Landscaping today. We schedule free on-site consultations to map out your project details.
+      </p>
+      <a href="contact.html" class="btn btn-primary" id="portfolio-cta-btn">Request Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom: 20px;">
+          <img src="assets/logos/jds-logo-VeJQuvJQ.png" alt="JD's Lawn & Landscaping Logo">
+          <div class="logo-text">
+            JD'S LAWN & LANDSCAPING
+            <span style="color: var(--primary-accent);">EST. 2021</span>
+          </div>
+        </div>
+        <p>Premium quality residential and commercial lawn care and landscaping services in Clarksville, TN and surrounding areas. Licensed & insured local family business.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" id="footer-link-home">Home</a></li>
+          <li><a href="about.html" id="footer-link-about">About Us</a></li>
+          <li><a href="services.html" id="footer-link-services">Our Services</a></li>
+          <li><a href="portfolio.html" id="footer-link-portfolio">Project Portfolio</a></li>
+          <li><a href="contact.html" id="footer-link-contact">Contact & Book</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="services.html" id="footer-service-design">Landscape Design</a></li>
+          <li><a href="services.html" id="footer-service-mulch">Mulch & Bed Edging</a></li>
+          <li><a href="services.html" id="footer-service-walls">Retaining Walls</a></li>
+          <li><a href="services.html" id="footer-service-patios">Patios & Pavers</a></li>
+          <li><a href="services.html" id="footer-service-lawn">Weekly Lawn Mowing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul class="footer-contact">
+          <li>
+            <span>📞</span>
+            <div>
+              <a href="tel:+19312186228" id="footer-phone-link">(931) 218-6228</a>
+            </div>
+          </li>
+          <li>
+            <span>✉️</span>
+            <div>
+              <a href="mailto:jds.lawn.landscape@gmail.com" id="footer-email-link">jds.lawn.landscape@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <span>📍</span>
+            <div>
+              <p>Clarksville, TN</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 JD's Lawn & Landscaping. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html" id="footer-privacy-policy">Privacy Policy</a>
+        <a href="contact.html" id="footer-terms-of-service">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

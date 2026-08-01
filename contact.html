@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Free Estimate | Contact JD's Lawn & Landscaping</title>
+  <meta name="description" content="Contact JD's Lawn & Landscaping in Clarksville, TN. Call (931) 218-6228 or fill out our online form for a free on-site estimate.">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="assets/logos/jds-logo-VeJQuvJQ.png">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo-link">
+        <img src="assets/logos/jds-logo-VeJQuvJQ.png" alt="JD's Lawn & Landscaping Logo">
+        <div class="logo-text">
+          JD'S LAWN & LANDSCAPING
+          <span>EST. 2021</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li class="nav-btn"><a href="#contact" class="btn btn-primary" id="nav-cta-btn">Get Estimate</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle Menu" id="mobile-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Inner Hero -->
+  <section class="inner-hero">
+    <div class="container">
+      <h1>Contact & Book</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>&bull;</span>
+        <span>Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Block & Form Section -->
+  <section class="section-padding bg-white" id="contact">
+    <div class="container">
+      <div class="contact-block">
+        <div class="contact-block-grid">
+          <!-- Left side: Contact Info -->
+          <div class="contact-info-side">
+            <div>
+              <span class="section-tag" style="color: var(--primary-accent);">Get in Touch</span>
+              <h2 class="section-title text-white" style="margin-bottom: 20px;">
+                Let's build something<br>
+                <span class="text-green">that lasts.</span>
+              </h2>
+              <p style="color: rgba(255, 255, 255, 0.7); font-size: 1.05rem;">
+                Talk to our team about your project details. We will reach out to schedule your free consultation.
+              </p>
+            </div>
+            
+            <div class="contact-info-details">
+              <!-- Item 1: Phone -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">📞</div>
+                <div class="contact-info-text">
+                  <span>Call Us Direct</span>
+                  <a href="tel:+19312186228" id="contact-phone-link">(931) 218-6228</a>
+                </div>
+              </div>
+              <!-- Item 2: Email -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">✉️</div>
+                <div class="contact-info-text">
+                  <span>Send An Email</span>
+                  <a href="mailto:jds.lawn.landscape@gmail.com" id="contact-email-link">jds.lawn.landscape@gmail.com</a>
+                </div>
+              </div>
+              <!-- Item 3: Hours -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">🕒</div>
+                <div class="contact-info-text">
+                  <span>Business Hours</span>
+                  <p style="font-size: 0.95rem; line-height: 1.4;">
+                    Mon - Fri: 8:00 AM - 5:00 PM<br>
+                    Sat: 9:00 AM - 2:00 PM<br>
+                    Sun: Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://www.facebook.com/" class="social-circle" target="_blank" aria-label="Facebook Profile" id="contact-facebook-link">f</a>
+            </div>
+          </div>
+
+          <!-- Right side: Contact Form -->
+          <div class="contact-form-side">
+            <div class="form-header">
+              <h3>Tell us about your project</h3>
+              <p>Fill out the form below and we will get back to you within 24 hours.</p>
+            </div>
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="(931) 555-0199" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="service">Requested Service</label>
+                <select id="service" name="service" class="form-control" required>
+                  <option value="" disabled selected>Select a Service</option>
+                  <option value="lawn-maintenance">Lawn Care & Maintenance</option>
+                  <option value="landscaping">Landscape Design & Build</option>
+                  <option value="mulching">Mulch & Soil Installation</option>
+                  <option value="retaining-walls">Retaining Walls</option>
+                  <option value="patios">Patios & Fire Pits</option>
+                  <option value="other">Other Outdoor Project</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 30px;">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Tell us about your yard, approximate dimensions, or design ideas..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit-btn" id="submit-project-inquiry">Submit Request</button>
+            </form>
+            <div class="form-success-message">
+              <h4>Thank you, estimate request sent!</h4>
+              <p>We've received your project details and will call or email you shortly to schedule your on-site estimate consultation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section Accordion -->
+  <section class="section-padding bg-cream">
+    <div class="container">
+      <div class="section-header center text-center">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">Common Questions</h2>
+        <p class="section-subtitle">Find answers to basic questions regarding our schedules, licenses, and estimates.</p>
+      </div>
+
+      <div class="faq-grid">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-question">Do you offer free estimates?</div>
+          <div class="faq-answer">
+            <p>Yes, absolutely! We provide free, transparent, flat-rate on-site consultations and estimates for all our services in Clarksville, TN and surrounding areas. No pressure, no obligations.</p>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question">Are you licensed and insured?</div>
+          <div class="faq-answer">
+            <p>Yes, JD's Lawn & Landscaping is a fully licensed and insured business. We protect our workers, our clients, and your property on every project we execute.</p>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question">How often do you mow lawns?</div>
+          <div class="faq-answer">
+            <p>We offer weekly scheduled lawn care maintenance. Consistent scheduling ensures your grass stays healthy, neat, mowed to the proper height, and striped cleanly.</p>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question">What areas do you serve?</div>
+          <div class="faq-answer">
+            <p>We serve residential and commercial properties throughout Clarksville, TN and immediate surrounding areas (including Sango, Woodlawn, Oak Grove, KY, and Fort Campbell).</p>
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-question">How soon can you start my project?</div>
+          <div class="faq-answer">
+            <p>Depending on the service and current seasonal demand, we typically schedule consultations within 2-3 business days and begin installations within 1-2 weeks after estimate approval.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom: 20px;">
+          <img src="assets/logos/jds-logo-VeJQuvJQ.png" alt="JD's Lawn & Landscaping Logo">
+          <div class="logo-text">
+            JD'S LAWN & LANDSCAPING
+            <span style="color: var(--primary-accent);">EST. 2021</span>
+          </div>
+        </div>
+        <p>Premium quality residential and commercial lawn care and landscaping services in Clarksville, TN and surrounding areas. Licensed & insured local family business.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" id="footer-link-home">Home</a></li>
+          <li><a href="about.html" id="footer-link-about">About Us</a></li>
+          <li><a href="services.html" id="footer-link-services">Our Services</a></li>
+          <li><a href="portfolio.html" id="footer-link-portfolio">Project Portfolio</a></li>
+          <li><a href="contact.html" id="footer-link-contact">Contact & Book</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="services.html" id="footer-service-design">Landscape Design</a></li>
+          <li><a href="services.html" id="footer-service-mulch">Mulch & Bed Edging</a></li>
+          <li><a href="services.html" id="footer-service-walls">Retaining Walls</a></li>
+          <li><a href="services.html" id="footer-service-patios">Patios & Pavers</a></li>
+          <li><a href="services.html" id="footer-service-lawn">Weekly Lawn Mowing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul class="footer-contact">
+          <li>
+            <span>📞</span>
+            <div>
+              <a href="tel:+19312186228" id="footer-phone-link">(931) 218-6228</a>
+            </div>
+          </li>
+          <li>
+            <span>✉️</span>
+            <div>
+              <a href="mailto:jds.lawn.landscape@gmail.com" id="footer-email-link">jds.lawn.landscape@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <span>📍</span>
+            <div>
+              <p>Clarksville, TN</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 JD's Lawn & Landscaping. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html" id="footer-privacy-policy">Privacy Policy</a>
+        <a href="contact.html" id="footer-terms-of-service">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
