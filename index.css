@@ -230,13 +230,13 @@ header.scrolled .nav-container {
 }
 
 .logo img {
-  height: 50px;
+  height: 52px;
   width: auto;
   transition: var(--transition-normal);
 }
 
 header.scrolled .logo img {
-  height: 42px;
+  height: 44px;
 }
 
 .logo-text {
@@ -330,12 +330,11 @@ header.scrolled .logo img {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   overflow: hidden;
-  padding-bottom: 100px;
 }
 
 /* Left-heavy gradient — dark base on left where text lives, barely-there on right */
@@ -419,7 +418,8 @@ header.scrolled .logo img {
 }
 
 .hero-title span {
-  display: block;
+  /* inline — line breaks are handled by <br> tags in the HTML */
+  display: inline;
 }
 
 /* The green "You can" line */
