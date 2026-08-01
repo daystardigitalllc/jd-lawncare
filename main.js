@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTopBtn.id = 'custom-scroll-top';
     scrollTopBtn.className = 'custom-scroll-top';
     scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
-    scrollTopBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;min-width:24px;min-height:24px;display:block;margin:auto;"><polyline points="18 15 12 9 6 15"></polyline></svg>';
+    scrollTopBtn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;min-width:22px;min-height:22px;display:block;margin:0 auto;padding:0;"><polyline points="18 15 12 9 6 15"></polyline></svg>';
     document.body.appendChild(scrollTopBtn);
   }
 
