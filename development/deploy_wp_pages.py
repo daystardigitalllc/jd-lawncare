@@ -42,25 +42,26 @@ def get_page_by_slug(slug):
         return pages[0]
     return None
 
-def deploy_page(title, slug, html_content, wp_page_id=None):
+def deploy_page(title, slug, html_content, wp_page_id=None, parent_id=0):
     payload = {
         'title': title,
         'slug': slug,
         'content': html_content,
         'status': 'publish',
-        'template': 'elementor_canvas'
+        'template': 'elementor_canvas',
+        'parent': parent_id
     }
     
     if wp_page_id:
-        print(f"Updating existing page ID {wp_page_id} ('{title}', /{slug}/)...")
+        print(f"Updating existing page ID {wp_page_id} ('{title}', /{slug}/, parent: {parent_id})...")
         status, res = make_request(f"/wp/v2/pages/{wp_page_id}", method="POST", data=payload)
     else:
         existing = get_page_by_slug(slug)
         if existing:
-            print(f"Page with slug /{slug}/ already exists (ID: {existing['id']}). Updating it...")
+            print(f"Page with slug /{slug}/ already exists (ID: {existing['id']}, parent: {parent_id}). Updating it...")
             status, res = make_request(f"/wp/v2/pages/{existing['id']}", method="POST", data=payload)
         else:
-            print(f"Creating new page '{title}' (/{slug}/)...")
+            print(f"Creating new page '{title}' (/{slug}/, parent: {parent_id})...")
             status, res = make_request("/wp/v2/pages", method="POST", data=payload)
             
     if status in (200, 201) and res:
@@ -71,7 +72,7 @@ def deploy_page(title, slug, html_content, wp_page_id=None):
         return None
 
 def minify_css(css):
-    # Remove @import font line
+    # Remove @import font line if it exists
     css = re.sub(r'@import url\([^\)]*\);', '', css)
     # Remove CSS comments
     css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
@@ -98,14 +99,14 @@ def minify_js(js):
     return js_clean.strip()
 
 def process_and_deploy():
-    print("Loading and minifying local CSS and JS files...")
+    print("Loading and minifying local global CSS and JS files...")
     with open("index.css", "r", encoding="utf-8") as f:
-        css_content = f.read()
+        global_css = f.read()
     
     with open("main.js", "r", encoding="utf-8") as f:
         js_content = f.read()
         
-    mini_css = minify_css(css_content)
+    mini_global_css = minify_css(global_css)
     mini_js = minify_js(js_content)
     
     # Prepend Google Font links as standard HTML tags
@@ -115,18 +116,29 @@ def process_and_deploy():
         '<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">'
     )
     
-    css_block = f"{font_links}<style>{mini_css}</style>"
     js_block = f"<script>{mini_js}</script>"
 
     pages = [
-        ("index.html", "Home", "home", 12),
-        ("about.html", "About Us", "about", 35),
-        ("services.html", "Our Services", "services", 36),
-        ("portfolio.html", "Project Portfolio", "portfolio", 37),
-        ("contact.html", "Contact & Book", "contact", 38)
+        # Format: (filename, title, slug, predefined_id, parent_slug)
+        # Core pages
+        ("index.html", "Home", "home", 12, None),
+        ("about.html", "About Us", "about", 35, None),
+        ("services.html", "Our Services", "services", 36, None),
+        ("portfolio.html", "Project Portfolio", "portfolio", 37, None),
+        ("contact.html", "Contact & Book", "contact", 38, None),
+        
+        # Subpages under services
+        ("services-design.html", "Landscape Design & Build", "landscaping-design-build", None, "services"),
+        ("services-mulch.html", "Mulch & Soil Installation", "mulch-soil-installation", None, "services"),
+        ("services-walls.html", "Retaining Walls", "retaining-walls", None, "services"),
+        ("services-patios.html", "Patios & Hardscaping", "patios-hardscaping", None, "services"),
+        ("services-lawn.html", "Weekly Lawn Mowing", "weekly-lawn-mowing", None, "services")
     ]
     
-    for filename, title, slug, page_id in pages:
+    # Cache for resolved parent slug -> parent ID mappings
+    parent_id_cache = {}
+    
+    for filename, title, slug, page_id, parent_slug in pages:
         print(f"\nProcessing {filename}...")
         if not os.path.exists(filename):
             print(f"Error: {filename} does not exist. Skipping.")
@@ -135,6 +147,17 @@ def process_and_deploy():
         with open(filename, "r", encoding="utf-8") as f:
             html = f.read()
             
+        # 1. Extract any page-specific style overrides in the HTML template (usually in <head>)
+        page_styles = re.findall(r"<style[^>]*>(.*?)</style>", html, re.DOTALL)
+        page_css = ""
+        for style in page_styles:
+            page_css += style
+            
+        mini_page_css = minify_css(page_css) if page_css else ""
+        combined_css = mini_global_css + mini_page_css
+        css_block = f"{font_links}<style>{combined_css}</style>"
+            
+        # 2. Extract body content
         body_match = re.search(r"<body[^>]*>(.*?)</body>", html, re.DOTALL)
         body_content = body_match.group(1) if body_match else html
         
@@ -149,15 +172,40 @@ def process_and_deploy():
         page_html = page_html.replace("url('assets/", f"url('{github_pages_assets_base}/assets/")
         page_html = page_html.replace('url("assets/', f'url("{github_pages_assets_base}/assets/')
         
-        # Rewrite links to point to WordPress pages using slug routes
-        page_html = page_html.replace('href="index.html"', 'href="index.php"')
-        page_html = page_html.replace('href="about.html"', 'href="index.php?pagename=about"')
-        page_html = page_html.replace('href="services.html"', 'href="index.php?pagename=services"')
-        page_html = page_html.replace('href="portfolio.html"', 'href="index.php?pagename=portfolio"')
-        page_html = page_html.replace('href="contact.html"', 'href="index.php?pagename=contact"')
+        # Rewrite links to point to WordPress pages using pretty permalinks
+        page_html = page_html.replace('href="index.html"', 'href="/"')
+        page_html = page_html.replace('href="about.html"', 'href="/about/"')
+        page_html = page_html.replace('href="services.html"', 'href="/services/"')
+        page_html = page_html.replace('href="portfolio.html"', 'href="/portfolio/"')
+        page_html = page_html.replace('href="contact.html"', 'href="/contact/"')
+        
+        # Subpage links
+        page_html = page_html.replace('href="services-design.html"', 'href="/services/landscaping-design-build/"')
+        page_html = page_html.replace('href="services-mulch.html"', 'href="/services/mulch-soil-installation/"')
+        page_html = page_html.replace('href="services-walls.html"', 'href="/services/retaining-walls/"')
+        page_html = page_html.replace('href="services-patios.html"', 'href="/services/patios-hardscaping/"')
+        page_html = page_html.replace('href="services-lawn.html"', 'href="/services/weekly-lawn-mowing/"')
+        
+        # Resolve parent ID
+        parent_id = 0
+        if parent_slug:
+            if parent_slug in parent_id_cache:
+                parent_id = parent_id_cache[parent_slug]
+            else:
+                parent_page = get_page_by_slug(parent_slug)
+                if parent_page:
+                    parent_id = parent_page['id']
+                    parent_id_cache[parent_slug] = parent_id
+                    print(f"Resolved parent slug '/{parent_slug}/' to page ID: {parent_id}")
+                else:
+                    print(f"Warning: Parent slug '/{parent_slug}/' could not be resolved! Deploying to root.")
         
         # Deploy page!
-        deploy_page(title, slug, page_html, wp_page_id=page_id)
+        deployed_id = deploy_page(title, slug, page_html, wp_page_id=page_id, parent_id=parent_id)
+        
+        # If this is the services page itself, make sure it is in our cache
+        if slug == "services" and deployed_id:
+            parent_id_cache["services"] = deployed_id
 
 if __name__ == "__main__":
     process_and_deploy()
