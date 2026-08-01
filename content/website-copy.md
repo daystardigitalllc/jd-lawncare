@@ -65,7 +65,7 @@
 *   **Headline (H2):** `Let's build something` <br> `that lasts.`
 *   **Subhead:** `Talk to our team about your project details.`
 *   **Details:**
-    *   Phone: `(931) 218-6228`
-    *   Email: `jds.lawn.landscape@gmail.com`
+    *   Phone: `(931) 801-6180`
+    *   Email: `Jdlawnandlandscaping14@gmail.com`
     *   Address: `Clarksville, TN`
 *   **Form Title:** `Tell us about your project`

@@ -8,8 +8,8 @@
 *   **Owner / Key Contact:** [MISSING_FACT: owner_name]
 *   **Physical Address:** Clarksville, TN
 *   **Mailing Address (if different):** Clarksville, TN
-*   **Primary Phone Number:** (931) 218-6228
-*   **Primary Email Address:** jds.lawn.landscape@gmail.com
+*   **Primary Phone Number:** (931) 801-6180
+*   **Primary Email Address:** Jdlawnandlandscaping14@gmail.com
 *   **Business License Numbers:** [MISSING_FACT: business_license]
 
 ---

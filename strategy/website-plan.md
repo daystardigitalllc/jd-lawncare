@@ -16,7 +16,7 @@
     *   *Button Text:* GET A FREE ESTIMATE (Anchor to contact form)
 *   **Secondary Call-to-Action (CTA):** 
     *   *Action:* Browse service portfolio / Call now
-    *   *Button Text:* EXPLORE SERVICES / CALL (931) 218-6228
+    *   *Button Text:* EXPLORE SERVICES / CALL (931) 801-6180
 *   **Primary Trust Elements (Badges/Badging placement):** 
     *   "100% Satisfaction Guarantee" Badge
     *   "Licensed & Insured Team" Badge
@@ -54,6 +54,6 @@ graph TD
 ---
 
 ## 5. Third-Party Integrations
-*   **Lead Intake:** HTML Form with built-in client-side validation, redirecting to Web3Forms / Formspree to email submissions to `jds.lawn.landscape@gmail.com`.
+*   **Lead Intake:** HTML Form with built-in client-side validation, redirecting to Web3Forms / Formspree to email submissions to `Jdlawnandlandscaping14@gmail.com`.
 *   **Review Feed Integration:** Embedded premium CSS-styled review cards representing verified customer testimonials.
 *   **Analytics & Tracking:** Self-contained SEO-friendly design prepared for Google Analytics tag integration.
