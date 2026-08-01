@@ -216,7 +216,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 16px 24px;
   transition: var(--transition-normal);
 }
 
@@ -1752,6 +1752,10 @@ footer {
 .ast-scroll-to-top-right,
 .ast-scroll-to-top-left,
 .custom-scroll-top {
+  width: 50px !important;
+  height: 50px !important;
+  min-width: 50px !important;
+  min-height: 50px !important;
   background-color: var(--secondary-accent) !important;
   color: var(--primary-accent) !important;
   fill: var(--primary-accent) !important;
@@ -1760,17 +1764,38 @@ footer {
   box-shadow: 0 6px 20px rgba(4, 28, 16, 0.4) !important;
   outline: none !important;
   cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   transition: var(--transition-normal) !important;
   -webkit-tap-highlight-color: transparent !important;
+  z-index: 99999 !important;
 }
 
-#ast-scroll-top *,
-.ast-scroll-top-icon *,
-.hfe-scroll-to-top-wrap *,
-.custom-scroll-top * {
-  fill: var(--primary-accent) !important;
-  color: var(--primary-accent) !important;
+#ast-scroll-top svg,
+.ast-scroll-top-icon svg,
+.hfe-scroll-to-top-wrap svg,
+.custom-scroll-top svg {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
   stroke: var(--primary-accent) !important;
+  fill: none !important;
+  stroke-width: 3px !important;
+  display: block !important;
+  margin: auto !important;
+}
+
+#ast-scroll-top i,
+.ast-scroll-top-icon i,
+.hfe-scroll-to-top-wrap i,
+#ast-scroll-top span,
+.ast-scroll-top-icon span {
+  font-size: 22px !important;
+  line-height: 1 !important;
+  color: var(--primary-accent) !important;
+  display: inline-block !important;
 }
 
 #ast-scroll-top:hover,
@@ -1782,25 +1807,25 @@ footer {
   fill: var(--secondary-accent) !important;
 }
 
-#ast-scroll-top:hover *,
-.ast-scroll-top-icon:hover *,
-.hfe-scroll-to-top-wrap:hover *,
-.custom-scroll-top:hover * {
-  fill: var(--secondary-accent) !important;
-  color: var(--secondary-accent) !important;
+#ast-scroll-top:hover svg,
+.ast-scroll-top-icon:hover svg,
+.hfe-scroll-to-top-wrap:hover svg,
+.custom-scroll-top:hover svg {
   stroke: var(--secondary-accent) !important;
+}
+
+#ast-scroll-top:hover i,
+.ast-scroll-top-icon:hover i,
+.hfe-scroll-to-top-wrap:hover i,
+#ast-scroll-top:hover span,
+.ast-scroll-top-icon:hover span {
+  color: var(--secondary-accent) !important;
 }
 
 .custom-scroll-top {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 46px;
-  height: 46px;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  z-index: 9999 !important;
+  bottom: 24px;
+  right: 24px;
   opacity: 0;
   visibility: hidden;
 }
@@ -1808,4 +1833,77 @@ footer {
 .custom-scroll-top.visible {
   opacity: 1;
   visibility: visible;
+}
+
+/* --- Comprehensive Mobile Optimization Overrides --- */
+@media (max-width: 768px) {
+  header .container,
+  .nav-container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .logo img {
+    height: 42px !important;
+  }
+
+  .hero {
+    min-height: 85vh;
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.5px !important;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 28px !important;
+  }
+
+  .hero-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .hero-btns .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-stats {
+    width: 100% !important;
+    justify-content: space-around !important;
+    padding: 14px 16px !important;
+    gap: 12px !important;
+  }
+
+  .hero-stat-divider {
+    display: none !important;
+  }
+
+  .about-floating-badge {
+    position: relative !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin-top: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .standards-stamp-badge {
+    right: 15px !important;
+    bottom: -15px !important;
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  .form-control, select, input, textarea {
+    font-size: 16px !important;
+  }
 }
