@@ -31,11 +31,6 @@ def make_request(endpoint, method="GET", data=None):
     except urllib.error.HTTPError as e:
         body = e.read().decode('utf-8')
         print(f"HTTP Error {e.code} for {method} {endpoint}: {e.reason}")
-        try:
-            err_json = json.loads(body)
-            print(f"Server response details: {json.dumps(err_json, indent=2)}")
-        except:
-            print(f"Server response body: {body[:300]}")
         return e.code, None
     except Exception as e:
         print(f"Network error for {method} {endpoint}: {e}")
@@ -76,6 +71,8 @@ def deploy_page(title, slug, html_content, wp_page_id=None):
         return None
 
 def minify_css(css):
+    # Remove @import font line
+    css = re.sub(r'@import url\([^\)]*\);', '', css)
     # Remove CSS comments
     css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
     # Remove newlines and excess whitespace
@@ -92,7 +89,6 @@ def minify_html(html):
     return html.strip()
 
 def minify_js(js):
-    # Simple JS clean: remove comments and multiple newlines
     # Remove single line comments
     js_clean = re.sub(r'//.*?\n', '\n', js)
     # Remove block comments
@@ -112,7 +108,14 @@ def process_and_deploy():
     mini_css = minify_css(css_content)
     mini_js = minify_js(js_content)
     
-    css_block = f"<style>{mini_css}</style>"
+    # Prepend Google Font links as standard HTML tags
+    font_links = (
+        '<link rel="preconnect" href="https://fonts.googleapis.com">'
+        '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+        '<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">'
+    )
+    
+    css_block = f"{font_links}<style>{mini_css}</style>"
     js_block = f"<script>{mini_js}</script>"
 
     pages = [
