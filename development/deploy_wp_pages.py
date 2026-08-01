@@ -48,7 +48,6 @@ def get_page_by_slug(slug):
     return None
 
 def deploy_page(title, slug, html_content, wp_page_id=None):
-    # Set elementor_canvas template so the page renders full width overriding the theme's header/footer
     payload = {
         'title': title,
         'slug': slug,
@@ -61,7 +60,6 @@ def deploy_page(title, slug, html_content, wp_page_id=None):
         print(f"Updating existing page ID {wp_page_id} ('{title}', /{slug}/)...")
         status, res = make_request(f"/wp/v2/pages/{wp_page_id}", method="POST", data=payload)
     else:
-        # Check if page already exists by slug
         existing = get_page_by_slug(slug)
         if existing:
             print(f"Page with slug /{slug}/ already exists (ID: {existing['id']}). Updating it...")
@@ -77,26 +75,52 @@ def deploy_page(title, slug, html_content, wp_page_id=None):
         print(f"FAILED: Page '{title}' deployment failed. Status: {status}")
         return None
 
+def minify_css(css):
+    # Remove CSS comments
+    css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
+    # Remove newlines and excess whitespace
+    css = re.sub(r'\s+', ' ', css)
+    # Remove spaces around layout characters
+    css = re.sub(r'\s*([\{\}:;,])\s*', r'\1', css)
+    return css.strip()
+
+def minify_html(html):
+    # Remove HTML comments
+    html = re.sub(r'<!--.*?-->', '', html, flags=re.DOTALL)
+    # Replace newlines and tabs with spaces
+    html = re.sub(r'\s+', ' ', html)
+    return html.strip()
+
+def minify_js(js):
+    # Simple JS clean: remove comments and multiple newlines
+    # Remove single line comments
+    js_clean = re.sub(r'//.*?\n', '\n', js)
+    # Remove block comments
+    js_clean = re.sub(r'/\*.*?\*/', '', js_clean, flags=re.DOTALL)
+    # Replace double and single newlines/spaces with a single space
+    js_clean = re.sub(r'\s+', ' ', js_clean)
+    return js_clean.strip()
+
 def process_and_deploy():
-    # 1. Read global CSS and JS
-    print("Loading local CSS and JS files...")
+    print("Loading and minifying local CSS and JS files...")
     with open("index.css", "r", encoding="utf-8") as f:
         css_content = f.read()
     
     with open("main.js", "r", encoding="utf-8") as f:
         js_content = f.read()
         
-    css_block = f"<style>\n{css_content}\n</style>"
-    js_block = f"<script>\n{js_content}\n</script>"
+    mini_css = minify_css(css_content)
+    mini_js = minify_js(js_content)
+    
+    css_block = f"<style>{mini_css}</style>"
+    js_block = f"<script>{mini_js}</script>"
 
-    # Define pages to deploy
-    # (HTML filename, Page Title, Slug, Page ID if existing)
     pages = [
         ("index.html", "Home", "home", 12),
-        ("about.html", "About Us", "about", None),
-        ("services.html", "Our Services", "services", None),
-        ("portfolio.html", "Project Portfolio", "portfolio", None),
-        ("contact.html", "Contact & Book", "contact", None)
+        ("about.html", "About Us", "about", 35),
+        ("services.html", "Our Services", "services", 36),
+        ("portfolio.html", "Project Portfolio", "portfolio", 37),
+        ("contact.html", "Contact & Book", "contact", 38)
     ]
     
     for filename, title, slug, page_id in pages:
@@ -108,24 +132,17 @@ def process_and_deploy():
         with open(filename, "r", encoding="utf-8") as f:
             html = f.read()
             
-        # Extract body content if we only want to upload body, but since elementor_canvas
-        # hides headers and footers, we can inject our custom CSS/JS directly into the page content.
-        # Let's clean the HTML: remove DOCTYPE, html, head tags, since WordPress will wrap page content.
-        # But we need our header and footer! The easiest way is to extract everything inside the <body> tag,
-        # and append the <style> block at the top and <script> block at the bottom of the body.
         body_match = re.search(r"<body[^>]*>(.*?)</body>", html, re.DOTALL)
-        if body_match:
-            body_content = body_match.group(1)
-        else:
-            body_content = html
-            
-        # Inline styles and scripts
-        page_html = f"{css_block}\n{body_content}\n{js_block}"
+        body_content = body_match.group(1) if body_match else html
         
-        # Rewrite asset paths to point to GitHub Pages raw static assets
-        # Example: assets/images/hero-bg.jpg -> https://daystardigitalllc.github.io/jd-lawncare/assets/images/hero-bg.jpg
+        # Minify HTML
+        mini_html = minify_html(body_content)
+        
+        # Combine everything without a single newline character
+        page_html = f"{css_block}{mini_html}{js_block}"
+        
+        # Rewrite asset paths
         page_html = page_html.replace('src="assets/', f'src="{github_pages_assets_base}/assets/')
-        # Also handle any css background-image properties: url('assets/images/...')
         page_html = page_html.replace("url('assets/", f"url('{github_pages_assets_base}/assets/")
         page_html = page_html.replace('url("assets/', f'url("{github_pages_assets_base}/assets/')
         
