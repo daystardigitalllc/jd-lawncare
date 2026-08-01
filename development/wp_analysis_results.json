@@ -1,0 +1,959 @@
+{
+  "site_name": "WORDPRESS TEMPLATE SITE",
+  "site_description": "",
+  "namespaces": [
+    "oembed/1.0",
+    "wordfence/v1",
+    "elementor-one/v1",
+    "fluent-snippets",
+    "hfe/v1",
+    "astra/v1",
+    "elementor/v1/documents",
+    "elementor/v1",
+    "elementor-ai/v1",
+    "elementor/v1/feedback",
+    "nps-survey/v1",
+    "mcp",
+    "wp/v2",
+    "wp-site-health/v1",
+    "wp-block-editor/v1",
+    "wp-abilities/v1"
+  ],
+  "settings": {
+    "title": "WORDPRESS TEMPLATE SITE",
+    "description": "",
+    "url": "https://wordpress-1644135-6589363.cloudwaysapps.com",
+    "email": "austin@daystardigital.co",
+    "timezone": "",
+    "date_format": "F j, Y",
+    "time_format": "g:i a",
+    "start_of_week": 1,
+    "language": "en_US",
+    "use_smilies": true,
+    "default_category": 1,
+    "default_post_format": "0",
+    "posts_per_page": 10,
+    "show_on_front": "page",
+    "page_on_front": 12,
+    "page_for_posts": 0,
+    "default_ping_status": "open",
+    "default_comment_status": null,
+    "site_logo": 11,
+    "site_icon": 0,
+    "elementor_one_welcome_screen_completed": null,
+    "elementor_one_dismiss_connect_alert": null
+  },
+  "themes": [
+    {
+      "stylesheet": "astra",
+      "template": "astra",
+      "requires_php": "5.3",
+      "requires_wp": "5.3",
+      "textdomain": "astra",
+      "version": "4.13.6",
+      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/astra/screenshot.jpg",
+      "author": {
+        "raw": "Brainstorm Force",
+        "rendered": "<a href=\"https://wpastra.com/about/?utm_source=theme_preview&#038;utm_medium=author_link&#038;utm_campaign=astra_theme\">Brainstorm Force</a>"
+      },
+      "author_uri": {
+        "raw": "https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme",
+        "rendered": "https://wpastra.com/about/?utm_source=theme_preview&#038;utm_medium=author_link&#038;utm_campaign=astra_theme"
+      },
+      "description": {
+        "raw": "The Astra WordPress theme is lightning-fast and highly customizable. It has over 1 million downloads and the only theme in the world with 6,000+ five-star reviews! It\u2019s ideal for professional web designers, solopreneurs, small businesses, eCommerce, membership sites and any type of website. It offers special features and templates so it works perfectly with all page builders like Spectra, Elementor, Beaver Builder, etc. Fast performance, clean code, mobile-first design and schema markup are all built-in, making the theme exceptionally SEO-friendly. It\u2019s fully compatible with WooCommerce, SureCart and other eCommerce plugins and comes with lots of store-friendly features and templates. Astra also provides expert support for free users. A dedicated team of fully trained WordPress experts are on hand to help with every aspect of the theme. Try the live demo of Astra: https://zipwp.org/themes/astra/",
+        "rendered": "The Astra WordPress theme is lightning-fast and highly customizable. It has over 1 million downloads and the only theme in the world with 6,000+ five-star reviews! It\u2019s ideal for professional web designers, solopreneurs, small businesses, eCommerce, membership sites and any type of website. It offers special features and templates so it works perfectly with all page builders like Spectra, Elementor, Beaver Builder, etc. Fast performance, clean code, mobile-first design and schema markup are all built-in, making the theme exceptionally SEO-friendly. It\u2019s fully compatible with WooCommerce, SureCart and other eCommerce plugins and comes with lots of store-friendly features and templates. Astra also provides expert support for free users. A dedicated team of fully trained WordPress experts are on hand to help with every aspect of the theme. Try the live demo of Astra: https://zipwp.org/themes/astra/"
+      },
+      "name": {
+        "raw": "Astra",
+        "rendered": "Astra"
+      },
+      "tags": {
+        "raw": [
+          "custom-menu",
+          "custom-logo",
+          "entertainment",
+          "one-column",
+          "two-columns",
+          "left-sidebar",
+          "e-commerce",
+          "right-sidebar",
+          "custom-colors",
+          "editor-style",
+          "featured-images",
+          "full-width-template",
+          "microformats",
+          "post-formats",
+          "rtl-language-support",
+          "theme-options",
+          "threaded-comments",
+          "translation-ready",
+          "blog"
+        ],
+        "rendered": "custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog"
+      },
+      "theme_uri": {
+        "raw": "https://wpastra.com/",
+        "rendered": "https://wpastra.com/"
+      },
+      "status": "active",
+      "theme_supports": {
+        "align-wide": true,
+        "automatic-feed-links": true,
+        "block-templates": false,
+        "block-template-parts": false,
+        "custom-background": false,
+        "custom-header": false,
+        "custom-logo": {
+          "width": 180,
+          "height": 60,
+          "flex-width": true,
+          "flex-height": true,
+          "header-text": [],
+          "unlink-homepage-logo": false
+        },
+        "customize-selective-refresh-widgets": true,
+        "dark-editor-style": false,
+        "disable-custom-colors": false,
+        "disable-custom-font-sizes": false,
+        "disable-custom-gradients": false,
+        "disable-layout-styles": false,
+        "editor-color-palette": false,
+        "editor-font-sizes": false,
+        "editor-gradient-presets": false,
+        "editor-spacing-sizes": false,
+        "editor-styles": false,
+        "html5": [
+          "navigation-widgets",
+          "search-form",
+          "gallery",
+          "caption",
+          "style",
+          "script"
+        ],
+        "formats": [
+          "standard",
+          "gallery",
+          "image",
+          "link",
+          "quote",
+          "video",
+          "audio",
+          "status",
+          "aside"
+        ],
+        "post-thumbnails": true,
+        "responsive-embeds": true,
+        "title-tag": true,
+        "wp-block-styles": false
+      },
+      "is_block_theme": false,
+      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/astra",
+      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/astra",
+      "default_template_types": [
+        {
+          "title": "Index",
+          "description": "Used as a fallback template for all pages when a more specific template is not defined.",
+          "slug": "index"
+        },
+        {
+          "title": "Blog Home",
+          "description": "Displays the latest posts as either the site homepage or as the \"Posts page\" as defined under reading settings. If it exists, the Front Page template overrides this template when posts are shown on the homepage.",
+          "slug": "home"
+        },
+        {
+          "title": "Front Page",
+          "description": "Displays your site's homepage, whether it is set to display latest posts or a static page. The Front Page template takes precedence over all templates.",
+          "slug": "front-page"
+        },
+        {
+          "title": "Single Entries",
+          "description": "Displays any single entry, such as a post or a page. This template will serve as a fallback when a more specific template (e.g. Single Post, Page, or Attachment) cannot be found.",
+          "slug": "singular"
+        },
+        {
+          "title": "Single Posts",
+          "description": "Displays a single post on your website unless a custom template has been applied to that post or a dedicated template exists.",
+          "slug": "single"
+        },
+        {
+          "title": "Pages",
+          "description": "Displays a static page unless a custom template has been applied to that page or a dedicated template exists.",
+          "slug": "page"
+        },
+        {
+          "title": "All Archives",
+          "description": "Displays any archive, including posts by a single author, category, tag, taxonomy, custom post type, and date. This template will serve as a fallback when more specific templates (e.g. Category or Tag) cannot be found.",
+          "slug": "archive"
+        },
+        {
+          "title": "Author Archives",
+          "description": "Displays a single author's post archive. This template will serve as a fallback when a more specific template (e.g. Author: Admin) cannot be found.",
+          "slug": "author"
+        },
+        {
+          "title": "Category Archives",
+          "description": "Displays a post category archive. This template will serve as a fallback when a more specific template (e.g. Category: Recipes) cannot be found.",
+          "slug": "category"
+        },
+        {
+          "title": "Taxonomy",
+          "description": "Displays a custom taxonomy archive. Like categories and tags, taxonomies have terms which you use to classify things. For example: a taxonomy named \"Art\" can have multiple terms, such as \"Modern\" and \"18th Century.\" This template will serve as a fallback when a more specific template (e.g. Taxonomy: Art) cannot be found.",
+          "slug": "taxonomy"
+        },
+        {
+          "title": "Date Archives",
+          "description": "Displays a post archive when a specific date is visited (e.g., example.com/2023/).",
+          "slug": "date"
+        },
+        {
+          "title": "Tag Archives",
+          "description": "Displays a post tag archive. This template will serve as a fallback when a more specific template (e.g. Tag: Pizza) cannot be found.",
+          "slug": "tag"
+        },
+        {
+          "title": "Attachment Pages",
+          "description": "Displays when a visitor views the dedicated page that exists for any media attachment.",
+          "slug": "attachment"
+        },
+        {
+          "title": "Search Results",
+          "description": "Displays when a visitor performs a search on your website.",
+          "slug": "search"
+        },
+        {
+          "title": "Privacy Policy",
+          "description": "Displays your site's Privacy Policy page.",
+          "slug": "privacy-policy"
+        },
+        {
+          "title": "Page: 404",
+          "description": "Displays when a visitor views a non-existent page, such as a dead link or a mistyped URL.",
+          "slug": "404"
+        },
+        {
+          "title": "Post Format: Standard",
+          "description": "Displays the Standard post format archive.",
+          "slug": "taxonomy-post_format-post-format-standard"
+        },
+        {
+          "title": "Post Format: Aside",
+          "description": "Displays the Aside post format archive.",
+          "slug": "taxonomy-post_format-post-format-aside"
+        },
+        {
+          "title": "Post Format: Chat",
+          "description": "Displays the Chat post format archive.",
+          "slug": "taxonomy-post_format-post-format-chat"
+        },
+        {
+          "title": "Post Format: Gallery",
+          "description": "Displays the Gallery post format archive.",
+          "slug": "taxonomy-post_format-post-format-gallery"
+        },
+        {
+          "title": "Post Format: Link",
+          "description": "Displays the Link post format archive.",
+          "slug": "taxonomy-post_format-post-format-link"
+        },
+        {
+          "title": "Post Format: Image",
+          "description": "Displays the Image post format archive.",
+          "slug": "taxonomy-post_format-post-format-image"
+        },
+        {
+          "title": "Post Format: Quote",
+          "description": "Displays the Quote post format archive.",
+          "slug": "taxonomy-post_format-post-format-quote"
+        },
+        {
+          "title": "Post Format: Status",
+          "description": "Displays the Status post format archive.",
+          "slug": "taxonomy-post_format-post-format-status"
+        },
+        {
+          "title": "Post Format: Video",
+          "description": "Displays the Video post format archive.",
+          "slug": "taxonomy-post_format-post-format-video"
+        },
+        {
+          "title": "Post Format: Audio",
+          "description": "Displays the Audio post format archive.",
+          "slug": "taxonomy-post_format-post-format-audio"
+        }
+      ],
+      "default_template_part_areas": [
+        {
+          "area": "uncategorized",
+          "label": "General",
+          "description": "General templates often perform a specific role like displaying post content, and are not tied to any particular area.",
+          "icon": "layout",
+          "area_tag": "div"
+        },
+        {
+          "area": "header",
+          "label": "Header",
+          "description": "The Header template defines a page area that typically contains a title, logo, and main navigation.",
+          "icon": "header",
+          "area_tag": "header"
+        },
+        {
+          "area": "footer",
+          "label": "Footer",
+          "description": "The Footer template defines a page area that typically contains site credits, social links, or any other combination of blocks.",
+          "icon": "footer",
+          "area_tag": "footer"
+        },
+        {
+          "area": "navigation-overlay",
+          "label": "Navigation Overlay",
+          "description": "The Navigation Overlay template defines an overlay area that typically contains navigation links and can be toggled open and closed.",
+          "icon": "navigation-overlay",
+          "area_tag": "div"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/astra",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+          }
+        ],
+        "wp:user-global-styles": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/global-styles/33"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "stylesheet": "twentytwentyfive",
+      "template": "twentytwentyfive",
+      "requires_php": "7.2",
+      "requires_wp": "6.7",
+      "textdomain": "twentytwentyfive",
+      "version": "1.5",
+      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfive/screenshot.png",
+      "author": {
+        "raw": "the WordPress team",
+        "rendered": "<a href=\"https://wordpress.org\">the WordPress team</a>"
+      },
+      "author_uri": {
+        "raw": "https://wordpress.org",
+        "rendered": "https://wordpress.org"
+      },
+      "description": {
+        "raw": "Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide.",
+        "rendered": "Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide."
+      },
+      "name": {
+        "raw": "Twenty Twenty-Five",
+        "rendered": "Twenty Twenty-Five"
+      },
+      "tags": {
+        "raw": [
+          "one-column",
+          "custom-colors",
+          "custom-menu",
+          "custom-logo",
+          "editor-style",
+          "featured-images",
+          "full-site-editing",
+          "block-patterns",
+          "rtl-language-support",
+          "sticky-post",
+          "threaded-comments",
+          "translation-ready",
+          "wide-blocks",
+          "block-styles",
+          "style-variations",
+          "accessibility-ready",
+          "blog",
+          "portfolio",
+          "news"
+        ],
+        "rendered": "one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news"
+      },
+      "theme_uri": {
+        "raw": "https://wordpress.org/themes/twentytwentyfive/",
+        "rendered": "https://wordpress.org/themes/twentytwentyfive/"
+      },
+      "status": "inactive",
+      "is_block_theme": true,
+      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfive",
+      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfive",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/twentytwentyfive",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+          }
+        ]
+      }
+    },
+    {
+      "stylesheet": "twentytwentyfour",
+      "template": "twentytwentyfour",
+      "requires_php": "7.0",
+      "requires_wp": "6.4",
+      "textdomain": "twentytwentyfour",
+      "version": "1.5",
+      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfour/screenshot.png",
+      "author": {
+        "raw": "the WordPress team",
+        "rendered": "<a href=\"https://wordpress.org\">the WordPress team</a>"
+      },
+      "author_uri": {
+        "raw": "https://wordpress.org",
+        "rendered": "https://wordpress.org"
+      },
+      "description": {
+        "raw": "Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.",
+        "rendered": "Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4."
+      },
+      "name": {
+        "raw": "Twenty Twenty-Four",
+        "rendered": "Twenty Twenty-Four"
+      },
+      "tags": {
+        "raw": [
+          "one-column",
+          "custom-colors",
+          "custom-menu",
+          "custom-logo",
+          "editor-style",
+          "featured-images",
+          "full-site-editing",
+          "block-patterns",
+          "rtl-language-support",
+          "sticky-post",
+          "threaded-comments",
+          "translation-ready",
+          "wide-blocks",
+          "block-styles",
+          "style-variations",
+          "accessibility-ready",
+          "blog",
+          "portfolio",
+          "news"
+        ],
+        "rendered": "one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news"
+      },
+      "theme_uri": {
+        "raw": "https://wordpress.org/themes/twentytwentyfour/",
+        "rendered": "https://wordpress.org/themes/twentytwentyfour/"
+      },
+      "status": "inactive",
+      "is_block_theme": true,
+      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfour",
+      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfour",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/twentytwentyfour",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+          }
+        ]
+      }
+    },
+    {
+      "stylesheet": "twentytwentythree",
+      "template": "twentytwentythree",
+      "requires_php": "5.6",
+      "requires_wp": "6.1",
+      "textdomain": "twentytwentythree",
+      "version": "1.6",
+      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentythree/screenshot.png",
+      "author": {
+        "raw": "the WordPress team",
+        "rendered": "<a href=\"https://wordpress.org\">the WordPress team</a>"
+      },
+      "author_uri": {
+        "raw": "https://wordpress.org",
+        "rendered": "https://wordpress.org"
+      },
+      "description": {
+        "raw": "Twenty Twenty-Three is designed to take advantage of the new design tools introduced in WordPress 6.1. With a clean, blank base as a starting point, this default theme includes ten diverse style variations created by members of the WordPress community. Whether you want to build a complex or incredibly simple website, you can do it quickly and intuitively through the bundled styles or dive into creation and full customization yourself.",
+        "rendered": "Twenty Twenty-Three is designed to take advantage of the new design tools introduced in WordPress 6.1. With a clean, blank base as a starting point, this default theme includes ten diverse style variations created by members of the WordPress community. Whether you want to build a complex or incredibly simple website, you can do it quickly and intuitively through the bundled styles or dive into creation and full customization yourself."
+      },
+      "name": {
+        "raw": "Twenty Twenty-Three",
+        "rendered": "Twenty Twenty-Three"
+      },
+      "tags": {
+        "raw": [
+          "one-column",
+          "custom-colors",
+          "custom-menu",
+          "custom-logo",
+          "editor-style",
+          "featured-images",
+          "full-site-editing",
+          "block-patterns",
+          "rtl-language-support",
+          "sticky-post",
+          "threaded-comments",
+          "translation-ready",
+          "wide-blocks",
+          "block-styles",
+          "style-variations",
+          "accessibility-ready",
+          "blog",
+          "portfolio",
+          "news"
+        ],
+        "rendered": "one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news"
+      },
+      "theme_uri": {
+        "raw": "https://wordpress.org/themes/twentytwentythree",
+        "rendered": "https://wordpress.org/themes/twentytwentythree"
+      },
+      "status": "inactive",
+      "is_block_theme": true,
+      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentythree",
+      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentythree",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/twentytwentythree",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+          }
+        ]
+      }
+    }
+  ],
+  "plugins": [
+    {
+      "plugin": "akismet/akismet",
+      "status": "inactive",
+      "name": "Akismet Anti-spam: Spam Protection",
+      "plugin_uri": "https://akismet.com/",
+      "author": "Automattic - Anti-spam Team",
+      "author_uri": "https://automattic.com/wordpress-plugins/",
+      "description": {
+        "raw": "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. Akismet Anti-spam keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.",
+        "rendered": "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. Akismet Anti-spam keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key. <cite>By <a href=\"https://automattic.com/wordpress-plugins/\">Automattic - Anti-spam Team</a>.</cite>"
+      },
+      "version": "5.7",
+      "network_only": false,
+      "requires_wp": "5.8",
+      "requires_php": "7.2",
+      "textdomain": "akismet",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/akismet/akismet",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "breeze/breeze",
+      "status": "inactive",
+      "name": "Breeze",
+      "plugin_uri": "",
+      "author": "Cloudways",
+      "author_uri": "https://www.cloudways.com",
+      "description": {
+        "raw": "Breeze is a cache plugin with extensive options to speed up your website. All the options including Varnish Cache are compatible with Cloudways hosting.",
+        "rendered": "Breeze is a cache plugin with extensive options to speed up your website. All the options including Varnish Cache are compatible with Cloudways hosting. <cite>By <a href=\"https://www.cloudways.com\">Cloudways</a>.</cite>"
+      },
+      "version": "2.5.9",
+      "network_only": true,
+      "requires_wp": "",
+      "requires_php": "",
+      "textdomain": "breeze",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/breeze/breeze",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "elementor/elementor",
+      "status": "active",
+      "name": "Elementor",
+      "plugin_uri": "https://elementor.com/?utm_source=wp-plugins&#038;utm_campaign=plugin-uri&#038;utm_medium=wp-dash",
+      "author": "Elementor.com",
+      "author_uri": "https://elementor.com/?utm_source=wp-plugins&#038;utm_campaign=author-uri&#038;utm_medium=wp-dash",
+      "description": {
+        "raw": "The Elementor Website Builder has it all: drag and drop page builder, Atomic Editor, pixel perfect design, global and reusable style systems, mobile responsive editing, and more. Get started now!",
+        "rendered": "The Elementor Website Builder has it all: drag and drop page builder, Atomic Editor, pixel perfect design, global and reusable style systems, mobile responsive editing, and more. Get started now! <cite>By <a href=\"https://elementor.com/?utm_source=wp-plugins&#038;utm_campaign=author-uri&#038;utm_medium=wp-dash\">Elementor.com</a>.</cite>"
+      },
+      "version": "4.1.4",
+      "network_only": false,
+      "requires_wp": "6.8",
+      "requires_php": "7.4",
+      "textdomain": "elementor",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/elementor/elementor",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "essential-addons-for-elementor-lite/essential_adons_elementor",
+      "status": "active",
+      "name": "Essential Addons for Elementor",
+      "plugin_uri": "https://essential-addons.com/",
+      "author": "WPDeveloper",
+      "author_uri": "https://wpdeveloper.com/",
+      "description": {
+        "raw": "The Essential plugin you install after Elementor! Packed with 100+ stunning elements like Data Table, Event Calendar, Filterable Gallery, WooCommerce.",
+        "rendered": "The Essential plugin you install after Elementor! Packed with 100+ stunning elements like Data Table, Event Calendar, Filterable Gallery, WooCommerce. <cite>By <a href=\"https://wpdeveloper.com/\">WPDeveloper</a>.</cite>"
+      },
+      "version": "6.6.11",
+      "network_only": false,
+      "requires_wp": "",
+      "requires_php": "",
+      "textdomain": "essential-addons-for-elementor-lite",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/essential-addons-for-elementor-lite/essential_adons_elementor",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "easy-code-manager/easy-code-manager",
+      "status": "active",
+      "name": "Fluent Snippets",
+      "plugin_uri": "https://fluentsnippets.com",
+      "author": "Fluent Snippets",
+      "author_uri": "https://fluentsnippets.com",
+      "description": {
+        "raw": "Super Fast File Based Native Code Snippets (header / footer codes) Manager for WordPress",
+        "rendered": "Super Fast File Based Native Code Snippets (header / footer codes) Manager for WordPress <cite>By <a href=\"https://fluentsnippets.com\">Fluent Snippets</a>.</cite>"
+      },
+      "version": "10.55",
+      "network_only": false,
+      "requires_wp": "6.0",
+      "requires_php": "7.3",
+      "textdomain": "easy-code-manager",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/easy-code-manager/easy-code-manager",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "daystar-template-library/hayes-template-library",
+      "status": "active",
+      "name": "Hayes Template Library",
+      "plugin_uri": "https://daystardigital.dev/",
+      "author": "Daystar Digital LLC",
+      "author_uri": "https://daystardigital.dev/",
+      "description": {
+        "raw": "Adds a local, self-hosted template library button to the Elementor \"Add Section\" area so you can browse, search, and instantly insert pre-built sections shipped inside the plugin \u2014 no cloud service required.",
+        "rendered": "Adds a local, self-hosted template library button to the Elementor &#8220;Add Section&#8221; area so you can browse, search, and instantly insert pre-built sections shipped inside the plugin \u2014 no cloud service required. <cite>By <a href=\"https://daystardigital.dev/\">Daystar Digital LLC</a>.</cite>"
+      },
+      "version": "1.0.0",
+      "network_only": false,
+      "requires_wp": "5.8",
+      "requires_php": "7.4",
+      "textdomain": "hayes-template-library",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/daystar-template-library/hayes-template-library",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "hello",
+      "status": "inactive",
+      "name": "Hello Dolly",
+      "plugin_uri": "http://wordpress.org/plugins/hello-dolly/",
+      "author": "Matt Mullenweg",
+      "author_uri": "http://ma.tt/",
+      "description": {
+        "raw": "This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from Hello, Dolly in the upper right of your admin screen on every page.",
+        "rendered": "This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from Hello, Dolly in the upper right of your admin screen on every page. <cite>By <a href=\"http://ma.tt/\">Matt Mullenweg</a>.</cite>"
+      },
+      "version": "1.7.2",
+      "network_only": false,
+      "requires_wp": "",
+      "requires_php": "",
+      "textdomain": "hello-dolly",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/hello",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "object-cache-pro/object-cache-pro",
+      "status": "inactive",
+      "name": "Object Cache Pro",
+      "plugin_uri": "https://objectcache.pro",
+      "author": "Rhubarb Group",
+      "author_uri": "https://rhubarb.group",
+      "description": {
+        "raw": "A business class Redis object cache backend for WordPress.",
+        "rendered": "A business class Redis object cache backend for WordPress. <cite>By <a href=\"https://rhubarb.group\">Rhubarb Group</a>.</cite>"
+      },
+      "version": "1.25.5",
+      "network_only": true,
+      "requires_wp": "",
+      "requires_php": "7.2",
+      "textdomain": "object-cache-pro",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/object-cache-pro/object-cache-pro",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "seo-by-rank-math/rank-math",
+      "status": "active",
+      "name": "Rank Math SEO",
+      "plugin_uri": "https://rankmath.com/",
+      "author": "Rank Math SEO",
+      "author_uri": "https://rankmath.com/?utm_source=Plugin&#038;utm_medium=Readme%20Author%20URI&#038;utm_campaign=WP",
+      "description": {
+        "raw": "Rank Math SEO is the Best WordPress SEO plugin with the features of many SEO and AI SEO tools in a single package to help multiply your SEO traffic.",
+        "rendered": "Rank Math SEO is the Best WordPress SEO plugin with the features of many SEO and AI SEO tools in a single package to help multiply your SEO traffic. <cite>By <a href=\"https://rankmath.com/?utm_source=Plugin&#038;utm_medium=Readme%20Author%20URI&#038;utm_campaign=WP\">Rank Math SEO</a>.</cite>"
+      },
+      "version": "1.0.273",
+      "network_only": false,
+      "requires_wp": "",
+      "requires_php": "",
+      "textdomain": "seo-by-rank-math",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/seo-by-rank-math/rank-math",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "header-footer-elementor/header-footer-elementor",
+      "status": "active",
+      "name": "Ultimate Addons for Elementor (UAE)",
+      "plugin_uri": "https://wordpress.org/plugins/header-footer-elementor/",
+      "author": "Brainstorm Force",
+      "author_uri": "https://www.brainstormforce.com/",
+      "description": {
+        "raw": "Ultimate Addons is a powerful plugin allows you to create custom headers and footers with Elementor and display them in selected locations. You can also create custom Elementor blocks and place them anywhere on your website using a shortcode.",
+        "rendered": "Ultimate Addons is a powerful plugin allows you to create custom headers and footers with Elementor and display them in selected locations. You can also create custom Elementor blocks and place them anywhere on your website using a shortcode. <cite>By <a href=\"https://www.brainstormforce.com/\">Brainstorm Force</a>.</cite>"
+      },
+      "version": "2.9.1",
+      "network_only": false,
+      "requires_wp": "",
+      "requires_php": "",
+      "textdomain": "header-footer-elementor",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/header-footer-elementor/header-footer-elementor",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "plugin": "wordfence/wordfence",
+      "status": "active",
+      "name": "Wordfence Security",
+      "plugin_uri": "https://www.wordfence.com/",
+      "author": "Wordfence",
+      "author_uri": "https://www.wordfence.com/",
+      "description": {
+        "raw": "Wordfence Security - Anti-virus, Firewall and Malware Scan",
+        "rendered": "Wordfence Security &#8211; Anti-virus, Firewall and Malware Scan <cite>By <a href=\"https://www.wordfence.com/\">Wordfence</a>.</cite>"
+      },
+      "version": "8.2.2",
+      "network_only": true,
+      "requires_wp": "4.7",
+      "requires_php": "7.0",
+      "textdomain": "wordfence",
+      "_links": {
+        "self": [
+          {
+            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/wordfence/wordfence",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "title": "Home",
+      "slug": "home",
+      "status": "publish",
+      "id": 12
+    },
+    {
+      "title": "Hello Theme #6",
+      "slug": "",
+      "status": "draft",
+      "id": 6
+    },
+    {
+      "title": "Privacy Policy",
+      "slug": "privacy-policy",
+      "status": "draft",
+      "id": 3
+    },
+    {
+      "title": "Sample Page",
+      "slug": "sample-page",
+      "status": "publish",
+      "id": 2
+    }
+  ]
+}
