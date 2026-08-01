@@ -25,12 +25,29 @@
     .service-detail-row:last-child {
       margin-bottom: 0;
     }
+    .service-title-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    .service-title-link:hover {
+      color: var(--primary-accent);
+    }
+    .service-image-link {
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+      line-height: 0;
+    }
     .service-detail-image img {
       width: 100%;
       height: 380px;
       object-fit: cover;
-      border-radius: 8px;
-      box-shadow: var(--box-shadow);
+      transition: transform var(--transition-normal);
+    }
+    .service-image-link:hover img {
+      transform: scale(1.03);
     }
     .service-features-list {
       list-style: none;
@@ -113,7 +130,9 @@
       <div class="service-detail-row">
         <div class="service-detail-text">
           <span class="section-tag">Custom Outdoor Plans</span>
-          <h2 class="section-title">Landscape Design & Build</h2>
+          <h2 class="section-title">
+            <a href="services-design.html" class="service-title-link">Landscape Design & Build</a>
+          </h2>
           <p style="color: var(--text-muted); margin-bottom: 15px;">
             Your property's layout is the first thing guests notice. We create custom landscape design strategies that coordinate colorful flower beds, decorative shrubs, structural boxwood hedges, and rock elements to maximize visual appeal and boost property value.
           </p>
@@ -125,7 +144,9 @@
           <a href="services-design.html" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Explore Design & Build &rarr;</a>
         </div>
         <div class="service-detail-image">
-          <img src="assets/images/services-design.jpg" alt="Landscape design project in Clarksville TN">
+          <a href="services-design.html" class="service-image-link">
+            <img src="assets/images/services-design.jpg" alt="Landscape design project in Clarksville TN">
+          </a>
         </div>
       </div>
 
@@ -133,7 +154,9 @@
       <div class="service-detail-row reverse">
         <div class="service-detail-text">
           <span class="section-tag">Healthy Soil & Sharp Borders</span>
-          <h2 class="section-title">Mulch & Bed Edging</h2>
+          <h2 class="section-title">
+            <a href="services-mulch.html" class="service-title-link">Mulch & Bed Edging</a>
+          </h2>
           <p style="color: var(--text-muted); margin-bottom: 15px;">
             A crisp line changes everything. We provide premium double-shredded hardwood mulch and garden soil top-off services. We finish every garden bed with deep, shovel-cut spade borders that prevent grass roots from encroaching and keep mulch contained.
           </p>
@@ -145,7 +168,9 @@
           <a href="services-mulch.html" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Explore Mulch & Edging &rarr;</a>
         </div>
         <div class="service-detail-image">
-          <img src="assets/images/services-mulch.jpg" alt="Premium mulch installation with clean cut edge">
+          <a href="services-mulch.html" class="service-image-link">
+            <img src="assets/images/services-mulch.jpg" alt="Premium mulch installation with clean cut edge">
+          </a>
         </div>
       </div>
 
@@ -153,7 +178,9 @@
       <div class="service-detail-row">
         <div class="service-detail-text">
           <span class="section-tag">Erosion Control & Structures</span>
-          <h2 class="section-title">Retaining Walls</h2>
+          <h2 class="section-title">
+            <a href="services-walls.html" class="service-title-link">Retaining Walls</a>
+          </h2>
           <p style="color: var(--text-muted); margin-bottom: 15px;">
             Prevent soil erosion while creating attractive level yard tiers. We design and construct structurally sound, durable retaining walls utilizing premium interlocking blocks, concrete masonry units, or natural flat-stone dry stacks.
           </p>
@@ -165,7 +192,9 @@
           <a href="services-walls.html" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Explore Retaining Walls &rarr;</a>
         </div>
         <div class="service-detail-image">
-          <img src="assets/images/services-walls.jpg" alt="Stone block retaining wall installation in Clarksville TN">
+          <a href="services-walls.html" class="service-image-link">
+            <img src="assets/images/services-walls.jpg" alt="Stone block retaining wall installation in Clarksville TN">
+          </a>
         </div>
       </div>
 
@@ -173,7 +202,9 @@
       <div class="service-detail-row reverse">
         <div class="service-detail-text">
           <span class="section-tag">Premium Hardscapes</span>
-          <h2 class="section-title">Patios & Fire Pits</h2>
+          <h2 class="section-title">
+            <a href="services-patios.html" class="service-title-link">Patios & Fire Pits</a>
+          </h2>
           <p style="color: var(--text-muted); margin-bottom: 15px;">
             Expand your home's usable footprint out into the open air. We install concrete paver patios, natural flagstone walkways, fire pits, and stone seating borders. Our stone hardscapes are built on reinforced aggregate gravel foundations to ensure zero sagging or weed intrusion.
           </p>
@@ -185,7 +216,9 @@
           <a href="services-patios.html" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Explore Patios & Pavers &rarr;</a>
         </div>
         <div class="service-detail-image">
-          <img src="assets/images/services-patios.jpg" alt="Paver patio with custom stone fire pit project">
+          <a href="services-patios.html" class="service-image-link">
+            <img src="assets/images/services-patios.jpg" alt="Paver patio with custom stone fire pit project">
+          </a>
         </div>
       </div>
 
@@ -193,7 +226,9 @@
       <div class="service-detail-row">
         <div class="service-detail-text">
           <span class="section-tag">Weekly Property Care</span>
-          <h2 class="section-title">Weekly Mowing & Maintenance</h2>
+          <h2 class="section-title">
+            <a href="services-lawn.html" class="service-title-link">Weekly Mowing & Maintenance</a>
+          </h2>
           <p style="color: var(--text-muted); margin-bottom: 15px;">
             Keep your lawn in golf-course condition without lifting a finger. Our weekly lawn care service includes precision height grass cuts, string trimming around obstacles, razor-sharp hard edging along driveways and walkways, and complete debris blowing.
           </p>
@@ -205,7 +240,9 @@
           <a href="services-lawn.html" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Explore Lawn Mowing &rarr;</a>
         </div>
         <div class="service-detail-image">
-          <img src="assets/images/portfolio-lawn.jpg" alt="Manicured green lawn with stripes mowed by professional crew">
+          <a href="services-lawn.html" class="service-image-link">
+            <img src="assets/images/portfolio-lawn.jpg" alt="Manicured green lawn with stripes mowed by professional crew">
+          </a>
         </div>
       </div>
     </div>
