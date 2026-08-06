@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const formData = new FormData(form);
       const data = {
-        access_key: form.getAttribute('data-web3forms-key') || '4a1b023f-e8b6-455b-8086-4f40f09804b4',
+        access_key: form.getAttribute('data-web3forms-key') || '63dd57a4-e01d-48f1-ba7f-546d8c83d6c8',
         name: formData.get('name'),
         phone: formData.get('phone'),
         email: formData.get('email'),
