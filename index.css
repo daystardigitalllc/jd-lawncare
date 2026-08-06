@@ -361,8 +361,8 @@ header.scrolled .logo img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-size: cover;
-  background-position: center 75% !important;
+  background-size: cover !important;
+  background-position: center center !important;
   background-repeat: no-repeat;
   overflow: hidden;
 }
