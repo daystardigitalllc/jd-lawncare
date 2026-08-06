@@ -2,11 +2,11 @@ import urllib.request
 import urllib.error
 
 routes = [
-    ("Home", "https://wordpress-1644135-6589363.cloudwaysapps.com/"),
-    ("About", "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?pagename=about"),
-    ("Services", "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?pagename=services"),
-    ("Portfolio", "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?pagename=portfolio"),
-    ("Contact", "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?pagename=contact")
+    ("Home", "https://jdslawnandlandscaping.com/"),
+    ("About", "https://jdslawnandlandscaping.com/index.php?pagename=about"),
+    ("Services", "https://jdslawnandlandscaping.com/index.php?pagename=services"),
+    ("Portfolio", "https://jdslawnandlandscaping.com/index.php?pagename=portfolio"),
+    ("Contact", "https://jdslawnandlandscaping.com/index.php?pagename=contact")
 ]
 
 def verify():

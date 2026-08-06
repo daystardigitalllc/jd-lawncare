@@ -13,4 +13,4 @@ User-agent: Googlebot-Image
 Allow: /assets/
 
 # Sitemap
-Sitemap: https://wordpress-1644135-6589363.cloudwaysapps.com/sitemap.xml
+Sitemap: https://jdslawnandlandscaping.com/sitemap.xml

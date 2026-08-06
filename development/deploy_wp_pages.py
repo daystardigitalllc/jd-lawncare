@@ -6,7 +6,7 @@ import re
 import os
 
 # Configuration
-site_url = "https://wordpress-1644135-6589363.cloudwaysapps.com"
+site_url = "https://jdslawnandlandscaping.com"
 username = "admin"
 app_password = "hPQz 4D2N SXEG 4MRm Iazu PJkI"
 github_pages_assets_base = "https://daystardigitalllc.github.io/jd-lawncare"

@@ -33,7 +33,7 @@ Do not write code, create pages, or make design assumptions yet. After completin
 Once we complete Discovery and save the facts, you will proceed to step-by-step strategic planning (website-plan, sitemap, keyword-research, design-direction) and wait for my approval before building any pages.
 
 Let's begin! Here is the URL and credentials to analyze:
-- Site URL: https://wordpress-1644135-6589363.cloudwaysapps.com/
+- Site URL: https://jdslawnandlandscaping.com/
 - Username: admin
 - App Password: hPQz 4D2N SXEG 4MRm Iazu PJkI
 ```

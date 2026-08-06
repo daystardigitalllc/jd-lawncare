@@ -22,7 +22,7 @@
   "settings": {
     "title": "WORDPRESS TEMPLATE SITE",
     "description": "",
-    "url": "https://wordpress-1644135-6589363.cloudwaysapps.com",
+    "url": "https://jdslawnandlandscaping.com",
     "email": "austin@daystardigital.co",
     "timezone": "",
     "date_format": "F j, Y",
@@ -51,7 +51,7 @@
       "requires_wp": "5.3",
       "textdomain": "astra",
       "version": "4.13.6",
-      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/astra/screenshot.jpg",
+      "screenshot": "https://jdslawnandlandscaping.com/wp-content/themes/astra/screenshot.jpg",
       "author": {
         "raw": "Brainstorm Force",
         "rendered": "<a href=\"https://wpastra.com/about/?utm_source=theme_preview&#038;utm_medium=author_link&#038;utm_campaign=astra_theme\">Brainstorm Force</a>"
@@ -148,8 +148,8 @@
         "wp-block-styles": false
       },
       "is_block_theme": false,
-      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/astra",
-      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/astra",
+      "stylesheet_uri": "https://jdslawnandlandscaping.com/wp-content/themes/astra",
+      "template_uri": "https://jdslawnandlandscaping.com/wp-content/themes/astra",
       "default_template_types": [
         {
           "title": "Index",
@@ -315,7 +315,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/astra",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes/astra",
             "targetHints": {
               "allow": [
                 "GET"
@@ -325,12 +325,12 @@
         ],
         "collection": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes"
           }
         ],
         "wp:user-global-styles": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/global-styles/33"
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/global-styles/33"
           }
         ],
         "curies": [
@@ -349,7 +349,7 @@
       "requires_wp": "6.7",
       "textdomain": "twentytwentyfive",
       "version": "1.5",
-      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfive/screenshot.png",
+      "screenshot": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentyfive/screenshot.png",
       "author": {
         "raw": "the WordPress team",
         "rendered": "<a href=\"https://wordpress.org\">the WordPress team</a>"
@@ -396,12 +396,12 @@
       },
       "status": "inactive",
       "is_block_theme": true,
-      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfive",
-      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfive",
+      "stylesheet_uri": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentyfive",
+      "template_uri": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentyfive",
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/twentytwentyfive",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes/twentytwentyfive",
             "targetHints": {
               "allow": [
                 "GET"
@@ -411,7 +411,7 @@
         ],
         "collection": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes"
           }
         ]
       }
@@ -423,7 +423,7 @@
       "requires_wp": "6.4",
       "textdomain": "twentytwentyfour",
       "version": "1.5",
-      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfour/screenshot.png",
+      "screenshot": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentyfour/screenshot.png",
       "author": {
         "raw": "the WordPress team",
         "rendered": "<a href=\"https://wordpress.org\">the WordPress team</a>"
@@ -470,12 +470,12 @@
       },
       "status": "inactive",
       "is_block_theme": true,
-      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfour",
-      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentyfour",
+      "stylesheet_uri": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentyfour",
+      "template_uri": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentyfour",
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/twentytwentyfour",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes/twentytwentyfour",
             "targetHints": {
               "allow": [
                 "GET"
@@ -485,7 +485,7 @@
         ],
         "collection": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes"
           }
         ]
       }
@@ -497,7 +497,7 @@
       "requires_wp": "6.1",
       "textdomain": "twentytwentythree",
       "version": "1.6",
-      "screenshot": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentythree/screenshot.png",
+      "screenshot": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentythree/screenshot.png",
       "author": {
         "raw": "the WordPress team",
         "rendered": "<a href=\"https://wordpress.org\">the WordPress team</a>"
@@ -544,12 +544,12 @@
       },
       "status": "inactive",
       "is_block_theme": true,
-      "stylesheet_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentythree",
-      "template_uri": "https://wordpress-1644135-6589363.cloudwaysapps.com/wp-content/themes/twentytwentythree",
+      "stylesheet_uri": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentythree",
+      "template_uri": "https://jdslawnandlandscaping.com/wp-content/themes/twentytwentythree",
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes/twentytwentythree",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes/twentytwentythree",
             "targetHints": {
               "allow": [
                 "GET"
@@ -559,7 +559,7 @@
         ],
         "collection": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/themes"
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/themes"
           }
         ]
       }
@@ -585,7 +585,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/akismet/akismet",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/akismet/akismet",
             "targetHints": {
               "allow": [
                 "GET",
@@ -618,7 +618,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/breeze/breeze",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/breeze/breeze",
             "targetHints": {
               "allow": [
                 "GET",
@@ -651,7 +651,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/elementor/elementor",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/elementor/elementor",
             "targetHints": {
               "allow": [
                 "GET",
@@ -684,7 +684,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/essential-addons-for-elementor-lite/essential_adons_elementor",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/essential-addons-for-elementor-lite/essential_adons_elementor",
             "targetHints": {
               "allow": [
                 "GET",
@@ -717,7 +717,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/easy-code-manager/easy-code-manager",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/easy-code-manager/easy-code-manager",
             "targetHints": {
               "allow": [
                 "GET",
@@ -750,7 +750,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/daystar-template-library/hayes-template-library",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/daystar-template-library/hayes-template-library",
             "targetHints": {
               "allow": [
                 "GET",
@@ -783,7 +783,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/hello",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/hello",
             "targetHints": {
               "allow": [
                 "GET",
@@ -816,7 +816,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/object-cache-pro/object-cache-pro",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/object-cache-pro/object-cache-pro",
             "targetHints": {
               "allow": [
                 "GET",
@@ -849,7 +849,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/seo-by-rank-math/rank-math",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/seo-by-rank-math/rank-math",
             "targetHints": {
               "allow": [
                 "GET",
@@ -882,7 +882,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/header-footer-elementor/header-footer-elementor",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/header-footer-elementor/header-footer-elementor",
             "targetHints": {
               "allow": [
                 "GET",
@@ -915,7 +915,7 @@
       "_links": {
         "self": [
           {
-            "href": "https://wordpress-1644135-6589363.cloudwaysapps.com/index.php?rest_route=/wp/v2/plugins/wordfence/wordfence",
+            "href": "https://jdslawnandlandscaping.com/index.php?rest_route=/wp/v2/plugins/wordfence/wordfence",
             "targetHints": {
               "allow": [
                 "GET",
