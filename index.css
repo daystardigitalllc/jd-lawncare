@@ -362,9 +362,13 @@ header.scrolled .logo img {
   display: flex;
   align-items: center;
   background-size: cover;
-  background-position: center top;
+  background-position: center 75% !important;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+#our-process {
+  padding-bottom: 50px !important;
 }
 
 /* Left-heavy gradient — dark base on left where text lives, barely-there on right */
