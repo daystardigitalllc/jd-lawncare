@@ -189,4 +189,144 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // --- Before & After Interactive Slider & Animation Handler ---
+  const baContainer = document.getElementById('ba-slider');
+  const baBeforeWrapper = document.getElementById('ba-before-wrapper');
+  const baBeforeImg = document.getElementById('ba-before-img');
+  const baAfterImg = document.getElementById('ba-after-img');
+  const baHandle = document.getElementById('ba-handle');
+  const baTabs = document.querySelectorAll('.ba-tab-btn');
+  const baProjectTitle = document.getElementById('ba-project-title');
+  const baProjectDesc = document.getElementById('ba-project-desc');
+  const baAutoScanBtn = document.getElementById('ba-autoscan-btn');
+
+  if (baContainer && baBeforeWrapper && baHandle) {
+    let isDragging = false;
+    let isScanning = false;
+    let scanDirection = 1;
+    let scanPos = 50;
+    let scanInterval = null;
+
+    const setSliderPos = (percentage) => {
+      percentage = Math.max(0, Math.min(100, percentage));
+      baBeforeWrapper.style.width = `${percentage}%`;
+      baHandle.style.left = `${percentage}%`;
+    };
+
+    const updateImageDimensions = () => {
+      if (baContainer && baBeforeImg) {
+        baBeforeImg.style.width = `${baContainer.offsetWidth}px`;
+      }
+    };
+
+    window.addEventListener('resize', updateImageDimensions);
+    updateImageDimensions();
+
+    const handleMove = (clientX) => {
+      const rect = baContainer.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const percentage = (x / rect.width) * 100;
+      setSliderPos(percentage);
+    };
+
+    // Mouse Events
+    baContainer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      stopAutoScan();
+      handleMove(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) handleMove(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Touch Events for Mobile
+    baContainer.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      stopAutoScan();
+      if (e.touches.length > 0) handleMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging && e.touches.length > 0) handleMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    // Preset Tabs Switcher
+    baTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        baTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const beforeSrc = tab.getAttribute('data-before');
+        const afterSrc = tab.getAttribute('data-after');
+        const title = tab.getAttribute('data-title');
+        const desc = tab.getAttribute('data-desc');
+
+        if (baBeforeImg) baBeforeImg.src = beforeSrc;
+        if (baAfterImg) baAfterImg.src = afterSrc;
+        if (baProjectTitle) baProjectTitle.textContent = title;
+        if (baProjectDesc) baProjectDesc.textContent = desc;
+
+        setSliderPos(50);
+        updateImageDimensions();
+      });
+    });
+
+    // Auto-Scan Reveal Animation Toggle
+    const startAutoScan = () => {
+      isScanning = true;
+      if (baAutoScanBtn) {
+        baAutoScanBtn.innerHTML = '<span class="scan-icon">⏸</span> Pause Auto-Scan';
+      }
+      scanInterval = setInterval(() => {
+        scanPos += scanDirection * 0.8;
+        if (scanPos >= 90) scanDirection = -1;
+        if (scanPos <= 10) scanDirection = 1;
+        setSliderPos(scanPos);
+      }, 16);
+    };
+
+    const stopAutoScan = () => {
+      isScanning = false;
+      if (scanInterval) clearInterval(scanInterval);
+      if (baAutoScanBtn) {
+        baAutoScanBtn.innerHTML = '<span class="scan-icon">▶</span> Auto-Scan Reveal';
+      }
+    };
+
+    if (baAutoScanBtn) {
+      baAutoScanBtn.addEventListener('click', () => {
+        if (isScanning) {
+          stopAutoScan();
+        } else {
+          startAutoScan();
+        }
+      });
+    }
+
+    // Auto-start initial scan hint for 3 seconds then center
+    setTimeout(() => {
+      if (!isDragging && !isScanning) {
+        let hintCount = 0;
+        const hintTimer = setInterval(() => {
+          hintCount += 0.05;
+          const hintPos = 50 + Math.sin(hintCount * 4) * 20;
+          setSliderPos(hintPos);
+          if (hintCount >= Math.PI * 2) {
+            clearInterval(hintTimer);
+            setSliderPos(50);
+          }
+        }, 16);
+      }
+    }, 1000);
+  }
 });
