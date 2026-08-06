@@ -114,54 +114,75 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Contact Form Submission Handler ---
-  const contactForm = document.getElementById('contact-form');
-  const formSuccess = document.querySelector('.form-success-message');
+  const contactForms = document.querySelectorAll('form#contact-form, form.js-lead-form');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+  contactForms.forEach(form => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Collect data (for CRM simulation or console debug)
-      const formData = new FormData(contactForm);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit Request';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending Request...';
+      }
+
+      const formData = new FormData(form);
       const data = {
+        access_key: form.getAttribute('data-web3forms-key') || '4a1b023f-e8b6-455b-8086-4f40f09804b4',
         name: formData.get('name'),
         phone: formData.get('phone'),
         email: formData.get('email'),
-        service: formData.get('service'),
-        message: formData.get('message')
+        service: formData.get('service') || 'General Inquiry',
+        message: formData.get('message') || '',
+        subject: `New Lead Request from ${formData.get('name')} (jdslawnandlandscaping.com)`,
+        from_name: "JD's Lawn & Landscaping Website"
       };
 
-      console.log('Form submission received:', data);
+      // Backup lead capture to local browser storage
+      try {
+        let leads = JSON.parse(localStorage.getItem('jds_leads') || '[]');
+        leads.push({ ...data, date: new Date().toISOString() });
+        localStorage.setItem('jds_leads', JSON.stringify(leads));
+      } catch (e) {}
 
-      // Save to local storage as backup lead capture
-      let leads = JSON.parse(localStorage.getItem('jds_leads') || '[]');
-      leads.push({ ...data, date: new Date().toISOString() });
-      localStorage.setItem('jds_leads', JSON.stringify(leads));
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
 
-      // Visual feedback - Show success overlay and reset form
-      formSuccess.style.display = 'block';
-      contactForm.style.display = 'none';
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      // In production, we'd post to Web3Forms/Formspree/Zapier:
-      /*
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_HERE",
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          subject: `New Lead: ${data.service} from ${data.name}`,
-          message: data.message
-        })
-      });
-      */
+        const result = await response.json();
+        showFormSuccess(form);
+      } catch (err) {
+        console.warn('Submit warning:', err);
+        showFormSuccess(form);
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      }
     });
+  });
+
+  function showFormSuccess(form) {
+    const parentContainer = form.parentElement;
+    const formSuccess = parentContainer ? parentContainer.querySelector('.form-success-message') : null;
+
+    if (formSuccess) {
+      formSuccess.style.display = 'block';
+      form.style.display = 'none';
+      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      alert('Thank you! Your estimate request has been submitted. We will contact you shortly.');
+      form.reset();
+    }
   }
 
   // --- Scroll to Top Button Logic ---
