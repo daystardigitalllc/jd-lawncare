@@ -416,16 +416,13 @@
       <!-- Main Interactive Comparison Container -->
       <div class="ba-main-card">
         <div class="ba-slider-container" id="ba-slider">
-          <!-- After Image (Base) -->
-          <img src="assets/images/after1.jpg" alt="After Transformation by JD's Lawn &amp; Landscaping" class="ba-image-after" id="ba-after-img">
-          
-          <!-- Before Image (Clipped overlay) -->
-          <div class="ba-before-wrapper" id="ba-before-wrapper" style="width: 50%;">
-            <img src="assets/images/before1.jpg" alt="Before Transformation" class="ba-image-before" id="ba-before-img">
-          </div>
+          <!-- Underlay Image (Before) -->
+          <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/before1.jpg" alt="Before Transformation" class="ba-image-before" id="ba-before-img">
+          <!-- Overlay Image (After) -->
+          <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/after1.jpg" alt="After Transformation by JD's Lawn &amp; Landscaping" class="ba-image-after" id="ba-after-img">
           
           <!-- Divider Bar with Handle -->
-          <div class="ba-divider-handle" id="ba-handle" style="left: 50%;">
+          <div class="ba-divider-handle" id="ba-handle">
             <div class="ba-handle-line"></div>
             <div class="ba-handle-button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -444,11 +441,6 @@
             <h3 id="ba-project-title">Overgrown Property Transformation</h3>
             <p id="ba-project-desc">Complete yard cleanup, crisp spade bed edging, fresh organic mulch, and turf conditioning.</p>
           </div>
-          <div class="ba-controls">
-            <button class="btn btn-primary btn-sm" id="ba-autoscan-btn">
-              <span class="scan-icon">▶</span> Auto-Scan Reveal
-            </button>
-          </div>
         </div>
       </div>
 
@@ -456,15 +448,18 @@
       <div class="ba-grid-sub">
         <!-- Grid Item 1 (Pair 4) -->
         <div class="ba-mini-card">
-          <div class="ba-mini-images">
-            <div class="ba-mini-img-wrap">
-              <img src="assets/images/before4.jpg" alt="Before Lawn Restoration">
-              <span class="ba-mini-tag before">BEFORE</span>
+          <div class="ba-slider-container ba-mini-slider">
+            <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/before4.jpg" alt="Before Lawn Restoration" class="ba-image-before">
+            <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/after4.jpg" alt="After Lawn Restoration" class="ba-image-after">
+            <div class="ba-divider-handle">
+              <div class="ba-handle-line"></div>
+              <div class="ba-handle-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
             </div>
-            <div class="ba-mini-img-wrap">
-              <img src="assets/images/after4.jpg" alt="After Lawn Restoration">
-              <span class="ba-mini-tag after">AFTER</span>
-            </div>
+            <span class="ba-label ba-label-before">BEFORE</span>
+            <span class="ba-label ba-label-after">AFTER</span>
           </div>
           <div class="ba-mini-info">
             <h4>Turf Care &amp; Precision Mowing</h4>
@@ -474,15 +469,18 @@
 
         <!-- Grid Item 2 (Pair 5) -->
         <div class="ba-mini-card">
-          <div class="ba-mini-images">
-            <div class="ba-mini-img-wrap">
-              <img src="assets/images/before5.jpg" alt="Before Bed Cleanup">
-              <span class="ba-mini-tag before">BEFORE</span>
+          <div class="ba-slider-container ba-mini-slider">
+            <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/before5.jpg" alt="Before Bed Cleanup" class="ba-image-before">
+            <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/after5.jpg" alt="After Bed Cleanup" class="ba-image-after">
+            <div class="ba-divider-handle">
+              <div class="ba-handle-line"></div>
+              <div class="ba-handle-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
             </div>
-            <div class="ba-mini-img-wrap">
-              <img src="assets/images/after5.jpg" alt="After Bed Cleanup">
-              <span class="ba-mini-tag after">AFTER</span>
-            </div>
+            <span class="ba-label ba-label-before">BEFORE</span>
+            <span class="ba-label ba-label-after">AFTER</span>
           </div>
           <div class="ba-mini-info">
             <h4>Bed Edging &amp; Soil Top-Off</h4>
@@ -492,15 +490,18 @@
 
         <!-- Grid Item 3 (Pair 6) -->
         <div class="ba-mini-card">
-          <div class="ba-mini-images">
-            <div class="ba-mini-img-wrap">
-              <img src="assets/images/before6.jpg" alt="Before Property Clean-up">
-              <span class="ba-mini-tag before">BEFORE</span>
+          <div class="ba-slider-container ba-mini-slider">
+            <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/before6.jpg" alt="Before Property Clean-up" class="ba-image-before">
+            <img src="https://jdslawnandlandscaping.com/wp-content/uploads/2026/08/after6.jpg" alt="After Property Clean-up" class="ba-image-after">
+            <div class="ba-divider-handle">
+              <div class="ba-handle-line"></div>
+              <div class="ba-handle-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
             </div>
-            <div class="ba-mini-img-wrap">
-              <img src="assets/images/after6.jpg" alt="After Property Clean-up">
-              <span class="ba-mini-tag after">AFTER</span>
-            </div>
+            <span class="ba-label ba-label-before">BEFORE</span>
+            <span class="ba-label ba-label-after">AFTER</span>
           </div>
           <div class="ba-mini-info">
             <h4>Full Property Cleanup &amp; Detailing</h4>
