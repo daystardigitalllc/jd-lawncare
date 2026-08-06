@@ -129,14 +129,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const formData = new FormData(form);
+      const nameVal = formData.get('client_name') || formData.get('name') || '';
+      const phoneVal = formData.get('client_phone') || formData.get('phone') || '';
+      const emailVal = formData.get('client_email') || formData.get('email') || '';
+      const serviceVal = formData.get('client_service') || formData.get('service') || 'General Inquiry';
+      const messageVal = formData.get('client_message') || formData.get('message') || '';
+
       const data = {
         access_key: form.getAttribute('data-web3forms-key') || '63dd57a4-e01d-48f1-ba7f-546d8c83d6c8',
-        name: formData.get('name'),
-        phone: formData.get('phone'),
-        email: formData.get('email'),
-        service: formData.get('service') || 'General Inquiry',
-        message: formData.get('message') || '',
-        subject: `New Lead Request from ${formData.get('name')} (jdslawnandlandscaping.com)`,
+        name: nameVal,
+        phone: phoneVal,
+        email: emailVal,
+        service: serviceVal,
+        message: messageVal,
+        subject: `New Lead Request from ${nameVal} (jdslawnandlandscaping.com)`,
         from_name: "JD's Lawn & Landscaping Website"
       };
 

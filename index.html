@@ -738,24 +738,24 @@
       <div class="contact-form-card-custom">
         <h3>Tell us about your project</h3>
         <p>Fill out the form below and we will get back to you within 24 hours.</p>
-        <form id="contact-form" data-web3forms-key="63dd57a4-e01d-48f1-ba7f-546d8c83d6c8">
+        <form id="contact-form" method="POST" action="javascript:void(0);" data-web3forms-key="63dd57a4-e01d-48f1-ba7f-546d8c83d6c8">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+              <input type="text" id="name" name="client_name" class="form-control" placeholder="John Doe" required>
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(931) 801-6180" required>
+              <input type="tel" id="phone" name="client_phone" class="form-control" placeholder="(931) 801-6180" required>
             </div>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+            <input type="email" id="email" name="client_email" class="form-control" placeholder="john@example.com" required>
           </div>
           <div class="form-group">
             <label for="service">Requested Service</label>
-            <select id="service" name="service" class="form-control" required>
+            <select id="service" name="client_service" class="form-control" required>
               <option value="" disabled selected>Select a Service</option>
               <option value="lawn-maintenance">Lawn Care & Maintenance</option>
               <option value="landscaping">Landscape Design & Build</option>
@@ -767,7 +767,7 @@
           </div>
           <div class="form-group" style="margin-bottom: 30px;">
             <label for="message">Project Details</label>
-            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your yard, approximate dimensions, or design ideas..." required></textarea>
+            <textarea id="message" name="client_message" class="form-control" placeholder="Tell us about your yard, approximate dimensions, or design ideas..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary form-submit-btn" id="submit-project-inquiry">Submit Request</button>
         </form>
