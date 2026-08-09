@@ -277,43 +277,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const baVideo = document.getElementById('ba-video');
 
     if (mainContainer && baTabs.length > 0) {
-      baTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          baTabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
+      const activateTab = (tab) => {
+        baTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
 
-          const videoSrc = tab.getAttribute('data-video');
-          const title = tab.getAttribute('data-title');
-          const desc = tab.getAttribute('data-desc');
+        const videoSrc = tab.getAttribute('data-video');
+        const title = tab.getAttribute('data-title');
+        const desc = tab.getAttribute('data-desc');
 
-          if (videoSrc) {
-            // Show video, hide image comparison slider
-            mainContainer.style.display = 'none';
-            if (baVideo) {
-              baVideo.style.display = 'block';
-              if (baVideo.getAttribute('src') !== videoSrc) {
-                baVideo.setAttribute('src', videoSrc);
-              }
-              baVideo.play().catch(() => {});
+        if (videoSrc) {
+          // Show video, hide image comparison slider
+          mainContainer.style.display = 'none';
+          if (baVideo) {
+            baVideo.style.display = 'block';
+            if (baVideo.getAttribute('src') !== videoSrc) {
+              baVideo.setAttribute('src', videoSrc);
             }
-          } else {
-            // Show image comparison slider, hide video
-            mainContainer.style.display = '';
-            if (baVideo) {
-              baVideo.pause();
-              baVideo.style.display = 'none';
-            }
-            const beforeSrc = tab.getAttribute('data-before');
-            const afterSrc = tab.getAttribute('data-after');
-            if (baBeforeImg) baBeforeImg.src = beforeSrc;
-            if (baAfterImg) baAfterImg.src = afterSrc;
-            mainContainer.style.setProperty('--slider-pos', '50%');
+            baVideo.play().catch(() => {});
           }
+        } else {
+          // Show image comparison slider, hide video
+          mainContainer.style.display = '';
+          if (baVideo) {
+            baVideo.pause();
+            baVideo.style.display = 'none';
+          }
+          const beforeSrc = tab.getAttribute('data-before');
+          const afterSrc = tab.getAttribute('data-after');
+          if (baBeforeImg) baBeforeImg.src = beforeSrc;
+          if (baAfterImg) baAfterImg.src = afterSrc;
+          mainContainer.style.setProperty('--slider-pos', '50%');
+        }
 
-          if (baProjectTitle) baProjectTitle.textContent = title;
-          if (baProjectDesc) baProjectDesc.textContent = desc;
-        });
+        if (baProjectTitle) baProjectTitle.textContent = title;
+        if (baProjectDesc) baProjectDesc.textContent = desc;
+      };
+
+      baTabs.forEach(tab => {
+        tab.addEventListener('click', () => activateTab(tab));
       });
+
+      // When a tab's video finishes playing, auto-advance to the next tab
+      if (baVideo) {
+        baVideo.addEventListener('ended', () => {
+          const currentIndex = Array.from(baTabs).findIndex(t => t.classList.contains('active'));
+          const nextIndex = (currentIndex + 1) % baTabs.length;
+          activateTab(baTabs[nextIndex]);
+        });
+      }
     }
   };
 
