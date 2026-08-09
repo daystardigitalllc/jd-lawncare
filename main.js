@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const baAfterImg = document.getElementById('ba-after-img');
     const baProjectTitle = document.getElementById('ba-project-title');
     const baProjectDesc = document.getElementById('ba-project-desc');
+    const baVideo = document.getElementById('ba-video');
 
     if (mainContainer && baTabs.length > 0) {
       baTabs.forEach(tab => {
@@ -281,17 +282,36 @@ document.addEventListener('DOMContentLoaded', () => {
           baTabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
 
-          const beforeSrc = tab.getAttribute('data-before');
-          const afterSrc = tab.getAttribute('data-after');
+          const videoSrc = tab.getAttribute('data-video');
           const title = tab.getAttribute('data-title');
           const desc = tab.getAttribute('data-desc');
 
-          if (baBeforeImg) baBeforeImg.src = beforeSrc;
-          if (baAfterImg) baAfterImg.src = afterSrc;
+          if (videoSrc) {
+            // Show video, hide image comparison slider
+            mainContainer.style.display = 'none';
+            if (baVideo) {
+              baVideo.style.display = 'block';
+              if (baVideo.getAttribute('src') !== videoSrc) {
+                baVideo.setAttribute('src', videoSrc);
+              }
+              baVideo.play().catch(() => {});
+            }
+          } else {
+            // Show image comparison slider, hide video
+            mainContainer.style.display = '';
+            if (baVideo) {
+              baVideo.pause();
+              baVideo.style.display = 'none';
+            }
+            const beforeSrc = tab.getAttribute('data-before');
+            const afterSrc = tab.getAttribute('data-after');
+            if (baBeforeImg) baBeforeImg.src = beforeSrc;
+            if (baAfterImg) baAfterImg.src = afterSrc;
+            mainContainer.style.setProperty('--slider-pos', '50%');
+          }
+
           if (baProjectTitle) baProjectTitle.textContent = title;
           if (baProjectDesc) baProjectDesc.textContent = desc;
-
-          mainContainer.style.setProperty('--slider-pos', '50%');
         });
       });
     }
