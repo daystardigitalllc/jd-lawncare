@@ -444,28 +444,30 @@
 
       <!-- Main Interactive Comparison Container -->
       <div class="ba-main-card">
-        <div class="ba-slider-container" id="ba-slider" style="display: none;">
-          <!-- Underlay Image (Before) -->
-          <img loading="lazy" src="assets/images/before-driveway.jpg" alt="Before Transformation" class="ba-image-before" id="ba-before-img">
-          <!-- Overlay Image (After) -->
-          <img loading="lazy" src="assets/images/after-driveway.jpg" alt="After Transformation by JD's Lawn &amp; Landscaping" class="ba-image-after" id="ba-after-img">
-          
-          <!-- Divider Bar with Handle -->
-          <div class="ba-divider-handle" id="ba-handle">
-            <div class="ba-handle-line"></div>
-            <div class="ba-handle-button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <div class="ba-media-stack">
+          <div class="ba-slider-container" id="ba-slider" style="display: none;">
+            <!-- Underlay Image (Before) -->
+            <img loading="lazy" src="assets/images/before-driveway.jpg" alt="Before Transformation" class="ba-image-before" id="ba-before-img">
+            <!-- Overlay Image (After) -->
+            <img loading="lazy" src="assets/images/after-driveway.jpg" alt="After Transformation by JD's Lawn &amp; Landscaping" class="ba-image-after" id="ba-after-img">
+
+            <!-- Divider Bar with Handle -->
+            <div class="ba-divider-handle" id="ba-handle">
+              <div class="ba-handle-line"></div>
+              <div class="ba-handle-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
             </div>
+
+            <!-- Labels -->
+            <span class="ba-label ba-label-before">BEFORE</span>
+            <span class="ba-label ba-label-after">AFTER</span>
           </div>
 
-          <!-- Labels -->
-          <span class="ba-label ba-label-before">BEFORE</span>
-          <span class="ba-label ba-label-after">AFTER</span>
+          <!-- Before/After Video (shown instead of slider for video-based tabs) -->
+          <video id="ba-video" class="ba-slider-container" src="assets/videos/before-after-grass-remediation.mp4" style="display: block; width: 100%; height: 100%; object-fit: cover; cursor: default;" muted playsinline autoplay></video>
         </div>
-
-        <!-- Before/After Video (shown instead of slider for video-based tabs) -->
-        <video id="ba-video" class="ba-slider-container" src="assets/videos/before-after-grass-remediation.mp4" style="display: block; width: 100%; height: 100%; object-fit: cover; cursor: default;" muted playsinline autoplay></video>
 
         <!-- Controls & Description Bar -->
         <div class="ba-info-bar">

@@ -1971,6 +1971,18 @@ footer {
   margin-bottom: 50px;
 }
 
+.ba-media-stack {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+
+.ba-media-stack .ba-slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .ba-slider-container {
   position: relative;
   width: 100%;
@@ -1980,6 +1992,8 @@ footer {
   touch-action: pan-y;
   cursor: ew-resize;
   background-color: var(--secondary-accent);
+  opacity: 1;
+  transition: opacity 0.35s ease;
 }
 
 /* Base underlay image (Before) */
@@ -2133,6 +2147,7 @@ footer {
 }
 
 @media (max-width: 992px) {
+  .ba-media-stack,
   .ba-slider-container {
     height: 380px;
   }
@@ -2150,6 +2165,7 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .ba-media-stack,
   .ba-slider-container {
     height: 280px;
   }

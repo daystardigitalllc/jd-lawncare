@@ -277,6 +277,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const baVideo = document.getElementById('ba-video');
 
     if (mainContainer && baTabs.length > 0) {
+      const FADE_MS = 300;
+
+      // Fade an element out, then hide it once fully transparent.
+      // Cancels any pending hide/reveal timer already queued for this element
+      // so overlapping calls can't fight each other.
+      const fadeOut = (el) => {
+        if (!el) return;
+        clearTimeout(el._baFadeTimer);
+        if (el.style.display === 'none') return;
+        el.style.opacity = '0';
+        el._baFadeTimer = setTimeout(() => {
+          el.style.display = 'none';
+        }, FADE_MS);
+      };
+
+      // Reveal an element and fade it in
+      const fadeIn = (el) => {
+        if (!el) return;
+        clearTimeout(el._baFadeTimer);
+        el.style.display = 'block';
+        el.style.opacity = '0';
+        // Force a reflow so the browser registers the display change
+        // before the opacity transition starts (otherwise it won't animate).
+        void el.offsetWidth;
+        el.style.opacity = '1';
+      };
+
       const activateTab = (tab) => {
         baTabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
@@ -286,27 +313,46 @@ document.addEventListener('DOMContentLoaded', () => {
         const desc = tab.getAttribute('data-desc');
 
         if (videoSrc) {
-          // Show video, hide image comparison slider
-          mainContainer.style.display = 'none';
+          fadeOut(mainContainer);
+
           if (baVideo) {
-            baVideo.style.display = 'block';
             if (baVideo.getAttribute('src') !== videoSrc) {
+              // Fade the current frame out first so the source swap
+              // (which briefly blanks the video) happens while hidden.
+              fadeOut(baVideo);
+              baVideo.pause();
+
+              let revealed = false;
+              const reveal = () => {
+                if (revealed) return;
+                revealed = true;
+                baVideo.removeEventListener('loadeddata', reveal);
+                clearTimeout(fallbackTimer);
+                fadeIn(baVideo);
+                baVideo.play().catch(() => {});
+              };
+              // Safety net in case 'loadeddata' is slow/never fires
+              const fallbackTimer = setTimeout(reveal, 1200);
+
+              baVideo.addEventListener('loadeddata', reveal);
               baVideo.setAttribute('src', videoSrc);
+              baVideo.load();
+            } else {
+              fadeIn(baVideo);
+              baVideo.play().catch(() => {});
             }
-            baVideo.play().catch(() => {});
           }
         } else {
-          // Show image comparison slider, hide video
-          mainContainer.style.display = '';
           if (baVideo) {
             baVideo.pause();
-            baVideo.style.display = 'none';
+            fadeOut(baVideo);
           }
           const beforeSrc = tab.getAttribute('data-before');
           const afterSrc = tab.getAttribute('data-after');
           if (baBeforeImg) baBeforeImg.src = beforeSrc;
           if (baAfterImg) baAfterImg.src = afterSrc;
           mainContainer.style.setProperty('--slider-pos', '50%');
+          fadeIn(mainContainer);
         }
 
         if (baProjectTitle) baProjectTitle.textContent = title;
