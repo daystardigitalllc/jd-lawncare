@@ -1946,6 +1946,8 @@ footer {
   cursor: pointer;
   transition: var(--transition-normal);
   font-family: 'Outfit', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .ba-tab-btn:hover,
@@ -1953,6 +1955,11 @@ footer {
   background-color: var(--primary-accent);
   color: var(--secondary-accent);
   border-color: var(--primary-accent);
+}
+
+.ba-tab-btn:focus-visible {
+  outline: 2px solid var(--primary-accent);
+  outline-offset: 2px;
 }
 
 .ba-main-card {

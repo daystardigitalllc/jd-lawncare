@@ -431,8 +431,8 @@
 
       <!-- Preset Tabs -->
       <div class="ba-tabs">
-        <button class="ba-tab-btn active" data-before="assets/images/before-driveway.jpg" data-after="assets/images/after-driveway.jpg" data-title="Gravel Driveway Installation" data-desc="Full path excavation, edging installation, and fresh crushed stone fill for a clean, defined driveway.">
-          Project 1: Driveway Install
+        <button class="ba-tab-btn active" data-video="assets/videos/before-after-grass-remediation.mp4" data-title="Backyard Grass Restoration" data-desc="Full backyard regrading, weed clearing, and straw-mulched seed bed prep so new grass can actually take root.">
+          Project 1: Backyard Grass Restoration
         </button>
         <button class="ba-tab-btn" data-video="assets/videos/before-after-house-restoration.mp4" data-title="Side of the House Restoration" data-desc="Full drainage correction with buried piping, decorative rock bed, and clean stone border along the side of the home.">
           Project 2: Side of House Restoration
@@ -444,7 +444,7 @@
 
       <!-- Main Interactive Comparison Container -->
       <div class="ba-main-card">
-        <div class="ba-slider-container" id="ba-slider">
+        <div class="ba-slider-container" id="ba-slider" style="display: none;">
           <!-- Underlay Image (Before) -->
           <img loading="lazy" src="assets/images/before-driveway.jpg" alt="Before Transformation" class="ba-image-before" id="ba-before-img">
           <!-- Overlay Image (After) -->
@@ -465,13 +465,13 @@
         </div>
 
         <!-- Before/After Video (shown instead of slider for video-based tabs) -->
-        <video id="ba-video" class="ba-slider-container" style="display: none; width: 100%; height: 100%; object-fit: cover; cursor: default;" muted playsinline autoplay></video>
+        <video id="ba-video" class="ba-slider-container" src="assets/videos/before-after-grass-remediation.mp4" style="display: block; width: 100%; height: 100%; object-fit: cover; cursor: default;" muted playsinline autoplay></video>
 
         <!-- Controls & Description Bar -->
         <div class="ba-info-bar">
           <div class="ba-info-text">
-            <h3 id="ba-project-title">Gravel Driveway Installation</h3>
-            <p id="ba-project-desc">Full path excavation, edging installation, and fresh crushed stone fill for a clean, defined driveway.</p>
+            <h3 id="ba-project-title">Backyard Grass Restoration</h3>
+            <p id="ba-project-desc">Full backyard regrading, weed clearing, and straw-mulched seed bed prep so new grass can actually take root.</p>
           </div>
         </div>
       </div>
