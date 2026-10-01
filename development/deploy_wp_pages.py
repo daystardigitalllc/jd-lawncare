@@ -131,8 +131,7 @@ def process_and_deploy():
         ("services-design.html", "Landscape Design & Build", "landscaping-design-build", None, "services"),
         ("services-mulch.html", "Mulch & Soil Installation", "mulch-soil-installation", None, "services"),
         ("services-walls.html", "Retaining Walls", "retaining-walls", None, "services"),
-        ("services-patios.html", "Patios & Hardscaping", "patios-hardscaping", None, "services"),
-        ("services-lawn.html", "Weekly Lawn Mowing", "weekly-lawn-mowing", None, "services")
+        ("services-patios.html", "Patios & Hardscaping", "patios-hardscaping", None, "services")
     ]
     
     # Cache for resolved parent slug -> parent ID mappings
@@ -184,7 +183,6 @@ def process_and_deploy():
         page_html = page_html.replace('href="services-mulch.html"', 'href="/services/mulch-soil-installation/"')
         page_html = page_html.replace('href="services-walls.html"', 'href="/services/retaining-walls/"')
         page_html = page_html.replace('href="services-patios.html"', 'href="/services/patios-hardscaping/"')
-        page_html = page_html.replace('href="services-lawn.html"', 'href="/services/weekly-lawn-mowing/"')
         
         # Resolve parent ID
         parent_id = 0
