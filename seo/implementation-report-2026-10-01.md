@@ -74,3 +74,27 @@ JD's no longer offers mowing. In the repo (source for the WordPress pages) I mad
 **Not yet applied to the live site.** The live page still 404s and is still in the Rank Math sitemap. Live steps (need CMS access): remove it from the sitemap, optionally return a 410, and do not redirect to the home page. After the repo is deployed, check the live pages for any remaining "lawn care" or "mowing" text and old schema. Check the Facebook page, Google Business Profile and other listings for mowing too.
 Unused files: `assets/images/mowing1.jpg` and `mowing2.jpg` are no longer referenced. Leave them or delete them as you prefer.
 Owner confirmed (2026-10-01) the "licensed & insured", "10+ years" and "commercial" claims are accurate.
+
+## Update: live site changes applied (2026-10-01, with the owner's WordPress application password)
+Pre-change backup: raw JSON of every page and post, plus the three old Rank Math descriptions, saved in the session scratchpad (`backup-2026-10-01/`). Rollback: WordPress keeps page revisions (Pages > edit > Revisions), and the trashed post can be restored from Trash.
+
+| Change | Result (live check, cache-busted) |
+| :--- | :--- |
+| `/services/weekly-lawn-mowing/` | Page id 59 was already in the trash. Live URL returns **404**. No page links to it. |
+| `/hello-world/` (post id 1) | **Moved to Trash** (reversible). Live URL returns **404**. |
+| Footer blurb on 21 pages | "lawn care and landscaping services" changed to "landscaping and hardscaping services" |
+| Home | Removed the testimonial that praised "weekly lawn cuts" and the "Lawn Care & Maintenance" option from the estimate form |
+| Contact | Removed the "Lawn Care & Maintenance" option; Rank Math description now says "landscaping or hardscaping estimate" |
+| About | "weekly turf cuts" changed to "sharp mulch borders"; description now says "landscaping and hardscaping services" |
+| Oak Grove | "lawn care and landscaping crews" changed to "landscaping crews" |
+| Mulch & Soil | "Many lawn care providers" changed to "Many landscapers" |
+| Portfolio | Three photos had mowing-style alt text that did not match the images. They show a skid steer grading a yard, a freshly graded backyard, and a new mulch bed. I kept the photos and corrected the alt text. Description now says "landscape design" instead of "lawn care". |
+
+Live sweep after changes: the services, blog, service-area and hardscaping pages contain no "mowing", "lawn care" or "lawn-maintenance" text.
+
+**Still open on the live site**
+1. **Sitemaps are stale.** `page-sitemap.xml` still lists the mowing URL and `post-sitemap.xml` still lists `/hello-world/`, even though both now return 404. This is a cached sitemap file I can't purge through the API. Fix: Rank Math > Sitemap Settings > Save (or purge the Breeze cache), then re-fetch both sitemaps. Submit the sitemap in Search Console once clean.
+2. **Organization description (Rank Math > Titles & Meta > Local SEO)** still reads "Professional lawn care, landscaping, mulch, shrub trimming, and seasonal cleanups". It appears in the schema on the home, about and contact pages. I did not edit it because the settings endpoint overwrites a whole settings group. Suggested text is below, but "shrub trimming" and "seasonal cleanups" need owner confirmation.
+   - Suggested: "Landscaping and hardscaping in Clarksville, TN: landscape design, mulch, retaining walls, patios, and excavating and grading. Licensed and insured. Free estimates."
+3. **Facebook, Google Business Profile and other listings:** check for mowing mentions (not checked).
+4. **Security:** the application password used here was shared in chat. Revoke it in WordPress (Users > Profile > Application Passwords) when we are done, and rotate the one in `MASTER_START_PROMPT.md`.
