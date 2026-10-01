@@ -69,8 +69,8 @@ JD's no longer offers mowing. In the repo (source for the WordPress pages) I mad
 - Changed schema (`Offer`, `knowsAbout`, service name) and meta descriptions from "lawn care" to landscaping and hardscaping.
 - Homepage title is now "Clarksville, TN Landscapers & Hardscaping | JD's Lawn & Landscaping", to match the `landscapers clarksville tn` query (28 impressions, position 6.8).
 - Updated `seo/keyword-research.md` to hardscaping and landscaping targets.
-- Filed "Natural Grass Restoration" under Mulching & Design. **Owner check:** confirm it is a real landscaping or restoration project, not recurring lawn care.
+- Filed "Natural Grass Restoration" under Mulching & Design. Owner confirmed (2026-10-01) it is a real project.
 
 **Not yet applied to the live site.** The live page still 404s and is still in the Rank Math sitemap. Live steps (need CMS access): remove it from the sitemap, optionally return a 410, and do not redirect to the home page. After the repo is deployed, check the live pages for any remaining "lawn care" or "mowing" text and old schema. Check the Facebook page, Google Business Profile and other listings for mowing too.
 Unused files: `assets/images/mowing1.jpg` and `mowing2.jpg` are no longer referenced. Leave them or delete them as you prefer.
-Owner facts: the "licensed & insured", "10+ years" and "commercial" claims were already in the copy and are unverified. Confirm them. "Commercial" appears in the footer and in a few meta descriptions.
+Owner confirmed (2026-10-01) the "licensed & insured", "10+ years" and "commercial" claims are accurate.
