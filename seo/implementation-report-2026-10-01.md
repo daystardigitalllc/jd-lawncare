@@ -100,3 +100,10 @@ Live sweep after changes: the services, blog, service-area and hardscaping pages
 4. **Security:** the application password used here was shared in chat. Revoke it in WordPress (Users > Profile > Application Passwords) when we are done, and rotate the one in `MASTER_START_PROMPT.md`.
 
 **Re-verified after owner action (2026-10-01):** `page-sitemap.xml` no longer lists the mowing URL, and the post sitemap is gone from the index. The home, about, contact and portfolio pages have no "lawn care" or "mowing" text. The organization schema description now reads "Landscaping and hardscaping in Clarksville, TN...". Items 1 and 2 above are closed. Still open: Search Console sitemap resubmission, listing checks, and the application-password revocation.
+
+## Update: portfolio photo review (live `/portfolio/`, 19 photos)
+- **Alt text:** rewrote 14 alt texts to describe what each photo shows (grading, drain trench, river rock and mulch beds, stone-block edging, gravel drive). This also fixed my earlier error that gave two different photos the same "pool backyard" alt.
+- **Internal links:** added one crawlable sentence above the gallery linking to patios & hardscaping, retaining walls, landscape design & build, mulch & soil, and excavating.
+- **Real hardscape in the portfolio:** stone-block bed edging (3 photos), a gravel drive with timber edging, river rock beds, and drainage and trench work. **There is no real patio or retaining-wall photo.**
+- **Owner must confirm:** the firepit patio at dusk (`services-patios-1.jpg`) and the terraced retaining wall with patio (`services-walls-1.jpg`) look like stock or AI images, not JD's jobs. They appear on the portfolio, the services page and the patio and wall pages, and the portfolio says every project is a real homeowner's. If they are not real jobs, replace them with real photos and keep that claim honest. I left their alt text unchanged until JD confirms.
+- Not changed: the repo's static `portfolio.html`, which no longer matches the live gallery.
