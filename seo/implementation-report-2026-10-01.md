@@ -98,3 +98,5 @@ Live sweep after changes: the services, blog, service-area and hardscaping pages
    - Suggested: "Landscaping and hardscaping in Clarksville, TN: landscape design, mulch, retaining walls, patios, and excavating and grading. Licensed and insured. Free estimates."
 3. **Facebook, Google Business Profile and other listings:** check for mowing mentions (not checked).
 4. **Security:** the application password used here was shared in chat. Revoke it in WordPress (Users > Profile > Application Passwords) when we are done, and rotate the one in `MASTER_START_PROMPT.md`.
+
+**Re-verified after owner action (2026-10-01):** `page-sitemap.xml` no longer lists the mowing URL, and the post sitemap is gone from the index. The home, about, contact and portfolio pages have no "lawn care" or "mowing" text. The organization schema description now reads "Landscaping and hardscaping in Clarksville, TN...". Items 1 and 2 above are closed. Still open: Search Console sitemap resubmission, listing checks, and the application-password revocation.
